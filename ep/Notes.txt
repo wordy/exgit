@@ -1,0 +1,23 @@
+Take a comma-separated list of $ids or, and array:
+
+function edit($ids){ 
+        if (!is_array($ids)){ 
+            $ids = explode(",", $ids); 
+        } 
+        
+...
+}
+
+Create a multi-input form:
+
+$i = $j = 0;
+foreach ($subjectGroups as $subjectGroup):
+    echo $this->Form->input('SubjectGroup.' . $i . '.id');
+    echo $this->Form->input('SubjectGroup.' . $i . '.name');
+    foreach ($subjectGroup['Subject'] as $subject):
+        echo $this->Form->input('Subject.' . $j . '.id');
+        echo $this->Form->input('Subject.' . $j . '.name');
+        $j++;
+    endforeach;
+    $i++;
+endforeach;

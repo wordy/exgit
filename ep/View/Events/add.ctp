@@ -26,10 +26,10 @@ echo $this->Form->input('vlog_in_seconds', array('type' => 'select',
 ));*/
         
         echo 'Primary Team <br/>';
-        echo $this->Form->select('PriTeam', $teams, array('multiple'=>false));
+        echo $this->Form->select('PriLink.pri_team_id', $teams, array('multiple'=>false));
         echo '<br/><br/>';
         echo 'Secondary Team(s) <br/>';
-        echo $this->Form->select('SecTeam', $teams, array('multiple'=>true));
+        echo $this->Form->select('PriLink.sec_team_id', $teams, array('multiple'=>true));
         echo $this->Form->input('PriLink.etype_id', array('multiple'=>false));
 	?>
 	</fieldset>

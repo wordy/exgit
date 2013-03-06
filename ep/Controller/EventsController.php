@@ -140,6 +140,11 @@ class EventsController extends AppController {
         $this->set(compact('plans'));
     }
 
+public function getsel($eventid){
+    $this->set('events', $this->Event->PriLink->getSelectedTeams($eventid));
+    $this->render('debug');
+}
+
 /**
  * edit method
  *
@@ -148,6 +153,12 @@ class EventsController extends AppController {
  * @return void
  */
     public function edit($id = null) {
+        
+        /*TODO: check sec teams coming in
+         * compare to list of current event sec teams
+         * logic to add/delete sec teams
+         * 
+         * */
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid event'));
         }
@@ -162,8 +173,13 @@ class EventsController extends AppController {
             $options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
             $this->request->data = $this->Event->find('first', $options);
         }
+        
+        
+        
         $plans = $this->Event->Plan->find('list');
-        $this->set(compact('plans'));
+        $teams = $this->Event->PriLink->PriTeam->find('list');
+        $selectedteams = $this->Event->PriLink->getSelectedTeams($id);
+        $this->set(compact('plans','teams','selectedteams'));
     }
 
 /**

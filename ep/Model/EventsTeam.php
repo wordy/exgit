@@ -171,5 +171,43 @@ class EventsTeam extends AppModel {
     return true;
     }
     
+    public function getSecTeams($eventid)
+    {
+        return $this->find('list', array(
+            'conditions'=>array(
+                'event_id'=>$eventid),
+            'fields'=>array(
+                'DISTINCT sec_team_id')));
+    }
+    
+    //returns 0-index array, for use in Form Helper
+    public function getSelectedTeams($eventid){
+        //$this->recursive='2';
+        $event = $this->Event->findById($eventid);
+        //$this->log($event, 'debug');
+        $priteam = $event['Plan']['team_id'];
+        //$this->log($priteam, 'debug');
+        $rel_teams = $this->find('list', array(
+            'conditions'=>array(
+                'event_id'=>$eventid,
+                ),
+            'fields'=>array('sec_team_id')));
+            
+        $selteams = Hash::extract($rel_teams, '{n}');
+
+        // FormHelper requires $options['Selected'] to be an int list        
+        if(!empty($selteams)){
+        
+        foreach ($selteams as $st) {
+            $sts[] = (int) $st;
+        }
+        return $sts;
+        }
+        
+        else {return null;}
+    }
+    
+        
+        
     
 }

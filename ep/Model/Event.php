@@ -69,8 +69,6 @@ class Event extends AppModel {
     );
     
     
-	
-	
-	
+
 
 }

@@ -82,8 +82,17 @@ class EventsController extends AppController {
  public function add() {
         if ($this->request->is('post')) {
             $this->log($this->request->data,'debug');
-            $priteam = $this->request->data['Event']['PriTeam'];
-            $secteams = $this->request->data['Event']['SecTeam'];
+            $priteam = $this->request->data['PriLink']['pri_team_id'];
+            $secteams = $this->request->data['PriLink']['sec_team_id'];
+            $etype = $this->request->data['PriLink']['etype_id'];
+            
+            if ($this->Event->Plan->isActive($this->request->data['Event']['plan_id'])){
+                $linkactive = 1;
+            }
+            
+            else { $linkactive = 0;}
+            
+            
             $this->Event->create();
             if ($this->Event->save($this->request->data)) {
                 
@@ -95,8 +104,8 @@ class EventsController extends AppController {
                     $secdata['event_id']=$event_id;
                     $secdata['pri_team_id']=$priteam;
                     $secdata['sec_team_id']=$gid;
-                    //$secdata['active']=xxx;
-                    //$secdata['etype_id']=xxx;
+                    $secdata['active']=$linkactive;
+                    $secdata['etype_id']=$etype;
                     
                     $this->Event->PriLink->save($secdata);            
                 

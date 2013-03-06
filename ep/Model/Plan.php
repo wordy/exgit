@@ -65,4 +65,24 @@ class Plan extends AppModel {
             else{ return false;}
         }
 
+    public function isActive($plan){
+        
+        if(is_numeric($plan)){
+            $rs = $this->findById($plan);
+        }
+        
+        else { $rs = $this->findByCode($plan); }
+            
+            if ($rs['Plan']['active']==1) {
+                return true;
+            }
+                
+            else{
+                 return false;
+            }
+        }
+        
+    
+
+
 }

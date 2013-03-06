@@ -139,6 +139,13 @@ class EventsController extends AppController {
         $this->set(compact('plans'));
     }
 
+    public function getSel($eventid){
+           $this->set('events', $this->Event->getSelectedTeams($eventid));
+           
+           $this->render('debug');
+    }
+
+
 /**
  * edit method
  *
@@ -147,6 +154,33 @@ class EventsController extends AppController {
  * @return void
  */
     public function edit($id = null) {
+        if (!$this->Event->exists($id)) {
+            throw new NotFoundException(__('Invalid event'));
+        }
+        if ($this->request->is('post') || $this->request->is('put')) {
+            if ($this->Event->save($this->request->data)) {
+                $this->Session->setFlash(__('The event has been saved'));
+                $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash(__('The event could not be saved. Please, try again.'));
+            }
+        } else {
+            $options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
+            $this->request->data = $this->Event->find('first', $options);
+        }
+
+        
+        
+        
+        $plans = $this->Event->Plan->find('list');
+        $teams = $this->Event->PriLink->PriTeam->find('list');
+        
+        $etypes = $this->Event->PriLink->Etype->find('list');
+        $this->set(compact('plans','teams','etypes'));
+        $this->set(compact('plans'));
+    }
+    
+    public function edit_BAKED($id = null) {
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid event'));
         }

@@ -68,9 +68,17 @@ class Event extends AppModel {
         )
     );
     
-    
-	
-	
-	
+    //returns 0-index array, for use in Form Helper
+    public function getSelectedTeams($eventid){
+        $event = $this->findById($eventid);
+        $priteam = $event['Event.Plan.Team.id'];
+        $this->debug($priteam);
+        $rel_teams = $this->PriLink->find('list', array(
+            'conditions'=>array(
+                'PriLink.event_id'=>$eventid,
+                )));
+        return $rel_teams;
+    }
+
 
 }

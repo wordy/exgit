@@ -13,47 +13,57 @@ class Plan extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'name';
+    public $displayField = 'name';
     public $order = "Plan.name ASC";
 
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
+    //The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
  * belongsTo associations
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Team' => array(
-			'className' => 'Team',
-			'foreignKey' => 'team_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+    public $belongsTo = array(
+        'Team' => array(
+            'className' => 'Team',
+            'foreignKey' => 'team_id',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
+    );
 
 /**
  * hasMany associations
  *
  * @var array
  */
-	public $hasMany = array(
-		'Event' => array(
-			'className' => 'Event',
-			'foreignKey' => 'plan_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
+    public $hasMany = array(
+        'Event' => array(
+            'className' => 'Event',
+            'foreignKey' => 'plan_id',
+            'dependent' => false,
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'exclusive' => '',
+            'finderQuery' => '',
+            'counterQuery' => ''
+        )
+    );
+
+    public function isActive($plan){
+        if(is_numeric($plan)){
+            $rs = $this->findById($plan); }
+        
+        else { $rs = $this->findByCode($plan); }
+            if ($rs['Plan']['active']==1) {
+                return true; }
+            else{ return false;}
+        }
 
     public function isActive($plan){
         

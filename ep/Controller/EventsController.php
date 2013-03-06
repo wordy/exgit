@@ -86,6 +86,7 @@ class EventsController extends AppController {
             $secteams = $this->request->data['PriLink']['sec_team_id'];
             $etype = $this->request->data['PriLink']['etype_id'];
             
+            // Check if plan_id is active team's plan... if so, make the linkage active
             if ($this->Event->Plan->isActive($this->request->data['Event']['plan_id'])){
                 $linkactive = 1;
             }

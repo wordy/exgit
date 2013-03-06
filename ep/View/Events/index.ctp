@@ -9,7 +9,10 @@
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('comment'); ?></th>
 			<th><?php echo $this->Paginator->sort('private'); ?></th>
+			<th><?php echo $this->Paginator->sort('active'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('num_sec_teams'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($events as $event): ?>
@@ -24,6 +27,9 @@
 		<td><?php echo h($event['Event']['comment']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['private']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['active']); ?>&nbsp;</td>
+		<td><?php echo h($event['Event']['created']); ?>&nbsp;</td>
+		<td><?php echo h($event['Event']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($event['Event']['num_sec_teams']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $event['Event']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $event['Event']['id'])); ?>

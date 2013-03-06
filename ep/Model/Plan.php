@@ -54,7 +54,8 @@ class Plan extends AppModel {
             'counterQuery' => ''
         )
     );
-
+        
+    // Takes either a plan_id or plan_code, and returns true/false if plan is active/inactive    
     public function isActive($plan){
         if(is_numeric($plan)){
             $rs = $this->findById($plan); }
@@ -65,22 +66,7 @@ class Plan extends AppModel {
             else{ return false;}
         }
 
-    public function isActive($plan){
         
-        if(is_numeric($plan)){
-            $rs = $this->findById($plan);
-        }
-        
-        else { $rs = $this->findByCode($plan); }
-            
-            if ($rs['Plan']['active']==1) {
-                return true;
-            }
-                
-            else{
-                 return false;
-            }
-        }
         
     
 

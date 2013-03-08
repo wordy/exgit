@@ -106,7 +106,31 @@ class EventsTeam extends AppModel {
                 ''),
             'fields'=>'Event.id'));
     */}
+        
+           
               
+    public function befSave($options=array()){
+        if(!empty($this->data)){
+            $steam = $this->data['PriLink']['sec_team_id'];
+            $pteam = $this->data['PriLink']['pri_team_id'];
+            $eid_to_match = $this->data['PriLink']['event_id'];
+            $active = $this->data['PriLink']['active'];
+            $l_eid = $this->data['PriLink']['linked_event_id'];
+        
+            // The time of event we're matching
+            $match_time = $this->Event->field('stime', array('id'=>$eid_to_match));
+            
+            $tobec = array('PriLink','Event','Event.Plan');
+            
+            $rs= $this->find('list', array('contain'=>$tobec));
+            
+            return $rs; 
+
+
+        }
+        
+    }
+    
     
     public function beforeSave($options = array()) {
         // Only activate if there is a secondary team to be saved
@@ -115,22 +139,12 @@ class EventsTeam extends AppModel {
             $pteam = $this->data['PriLink']['pri_team_id'];
             $eid_to_match = $this->data['PriLink']['event_id'];
             
-   /*
-    * 
-    * 
-    * 
-    * 
-    */
-   
-   
-   
-   
-   
-   
-   
             // The time of event we're matching
             $match_time = $this->Event->field('stime', array(
                 'id'=>$eid_to_match));
+            
+            //TODO: Containable may be able to combine
+            //      the next two finds
             
             // Find all reverse relations, get event IDs
             $revevents = $this->find('list', array(
@@ -257,7 +271,25 @@ class EventsTeam extends AppModel {
         else {return null;}
     }
     
+   public function trycontain($eventid){
+        //$tobec = array('PriLink','Event','Event.Plan');
+          $tobec = null;  
+          
+          $tobec2 = array(
+          'LinkedEvent',
+          'Event'=>array(
+            'conditions'=>array(
+                'Event.id'  => $eventid),
+            'fields'=>array('Event.id'))
+           );
+                //$this->recursive=-1;
+                
+            $tobec3 = array('Event.id = '.$eventid);
+            $rs= $this->find('all', array('contain'=>$tobec2,'recursive'=>2));
+            
+            return $rs; 
         
+    }      
         
     
 }

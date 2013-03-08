@@ -373,5 +373,14 @@ class EventsController extends AppController {
         $this->render('debug_req');
         
     }
+    
+    public function trycont($event){
+     $this->set('out1', $this->Event->trycontain($event));
+     
+     $this->render('/events/debug_req');   
+        
+    }
+    
+    
 
 }

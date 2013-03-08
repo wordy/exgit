@@ -1198,3 +1198,152 @@ Stack Trace:
 #11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-03-08 21:46:23 Error: Fatal Error (1): Call to undefined method EventsTeamsController::trycontain() in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php, line 161]
+2013-03-08 21:46:23 Error: [FatalErrorException] Call to undefined method EventsTeamsController::trycontain()
+Request URL: /cakephp/ep/events_teams/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 161)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 161, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 161, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 21:46:55 Error: Fatal Error (1): Call to a member function trycontain() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php, line 161]
+2013-03-08 21:46:55 Error: [FatalErrorException] Call to a member function trycontain() on a non-object
+Request URL: /cakephp/ep/events_teams/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 161)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 161, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 161, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 21:47:59 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\EventsTeams\events\debug_req.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\EventsTeams\\events\\debug_req.ctp',
+)
+Request URL: /cakephp/ep/events_teams/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName('events/debug_re...')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render('events/debug_re...', NULL)
+#2 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(163): Controller->render('events/debug_re...')
+#3 [internal function]: EventsTeamsController->trycont('121')
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-08 21:49:18 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\Events\events\debug_req.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\Events\\events\\debug_req.ctp',
+)
+Request URL: /cakephp/ep/events/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName('events/debug_re...')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render('events/debug_re...', NULL)
+#2 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(380): Controller->render('events/debug_re...')
+#3 [internal function]: EventsController->trycont('121')
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-08 21:49:46 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\Events\events\debug_req.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\Events\\events\\debug_req.ctp',
+)
+Request URL: /cakephp/ep/events/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName('events/debug_re...')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render('events/debug_re...', NULL)
+#2 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(380): Controller->render('events/debug_re...')
+#3 [internal function]: EventsController->trycont('121')
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-08 21:50:02 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\Events\events\debug_req.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\Events\\events\\debug_req.ctp',
+)
+Request URL: /cakephp/ep/events/trycont/121
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName('events/debug_re...')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render('events/debug_re...', NULL)
+#2 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(380): Controller->render('events/debug_re...')
+#3 [internal function]: EventsController->trycont('121')
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-08 22:06:22 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `PriLink`.`event_id` IN (1, 4, 5, 6, 7, 3, 8, 9, 10, 11, 12, 13, 14, 15, 16,' at line 1
+Request URL: /cakephp/ep/events/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Event), 'SELECT `PriLink...', Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 0, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(91): Model->find('all', Array)
+#8 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(378): Event->trycontain('173')
+#9 [internal function]: EventsController->trycont('173')
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-08 22:14:24 Error: [MissingControllerException] Controller class EventsTeamController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsTeamController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/events_team/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-08 22:15:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in on clause is ambiguous
+Request URL: /cakephp/ep/events_teams/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(283): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(162): EventsTeam->trycontain('173')
+#7 [internal function]: EventsTeamsController->trycont('173')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-08 22:20:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')  WHERE 1 = 1' at line 1
+Request URL: /cakephp/ep/events_teams/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(285): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(162): EventsTeam->trycontain('173')
+#7 [internal function]: EventsTeamsController->trycont('173')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-08 22:23:15 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php, line 282]
+2013-03-08 22:23:15 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/ep/events_teams/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 282)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 282, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 282, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

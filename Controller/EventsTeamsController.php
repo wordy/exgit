@@ -157,4 +157,15 @@ class EventsTeamsController extends AppController {
         
             }
 
+
+public function trycont($event){
+     $this->set('out1', $this->EventsTeam->trycontain($event));
+     
+     $this->render('/events/debug_req');   
+        
+    }
+
+
+
+
 }

@@ -83,7 +83,20 @@ class Event extends AppModel {
     }
 
 
-
+public function trycontain($eventid){
+        //$tobec = array('PriLink','Event','Event.Plan');
+          $tobec = null;  
+          
+          $tobec2 = array(
+          'PriLink'=>array(
+            'conditions'=>array(
+                'PriLink.event_id =' => $eventid)));
+                //$this->recursive=-1;
+            $rs= $this->find('all', array('contain'=>$tobec2, 'recursive'=>-1));
+            
+            return $rs; 
+        
+    } 
 
 
 

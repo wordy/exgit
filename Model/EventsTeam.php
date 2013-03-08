@@ -55,6 +55,8 @@ class EventsTeam extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
+        
+        
 		'Etype' => array(
 			'className' => 'Etype',
 			'foreignKey' => 'etype_id',
@@ -64,7 +66,47 @@ class EventsTeam extends AppModel {
 		)
 	);
     
-               
+    //
+    
+    public function beforeDelete($cascade = true){
+        $rs = $this->findById($this->id);
+        
+        $this->log($rs,'debug');
+        $pri_t = $rs['PriLink']['pri_team_id'];
+        $sec_t = $rs['PriLink']['sec_team_id'];
+        $m_time = $rs['Event']['stime'];
+        $link_id = $rs['PriLink']['linked_event_id']; 
+        
+        if(!empty($link_id)){
+            //if association we're deleting has a linked_id, start by removing the to-be deleted association
+            // from that linkage
+            $this->updateAll(array('linked_event_id'=>0), array(
+                'PriLink.event_id'=>$link_id,
+                'PriLink.sec_team_id'=>$pri_t,
+                'PriLink.pri_team_id'=>$sec_t,
+                'PriLink.linked_event_id'=>$this->id));
+        }
+
+        return true;
+        /*
+        $this->Event->find('list', array(
+            'conditions'=>array(
+                'Event.stime'=>$m_time,
+                'PriLink.pri_team_id'=>$sec_t,
+                'PriLink.sec_team_id'=>$pri_t),
+            'fields'=>array(
+                'Event.id')));
+        
+        if($this->update(array('PriLink.linked_event_id'=>0), array(
+            'PriLink.pri_team_id'=>$sec_t,
+            'PriLink.sec_team_id'=>$pri_t,
+             ))){}
+        $this->Event->find('list',array(
+            'conditions'=>array(
+                ''),
+            'fields'=>'Event.id'));
+    */}
+              
     
     public function beforeSave($options = array()) {
         // Only activate if there is a secondary team to be saved
@@ -73,6 +115,19 @@ class EventsTeam extends AppModel {
             $pteam = $this->data['PriLink']['pri_team_id'];
             $eid_to_match = $this->data['PriLink']['event_id'];
             
+   /*
+    * 
+    * 
+    * 
+    * 
+    */
+   
+   
+   
+   
+   
+   
+   
             // The time of event we're matching
             $match_time = $this->Event->field('stime', array(
                 'id'=>$eid_to_match));
@@ -94,12 +149,7 @@ class EventsTeam extends AppModel {
                 'fields'=>array(
                     'Event.id')
                     ));
-                    
-
-                    
-                    
-                    
-                    
+                     
             // Get eid of matched event(s) -- Should only be one.
             // Returns an array, so must pull eid out
             $matchedid = Hash::extract($sametime, '{n}');

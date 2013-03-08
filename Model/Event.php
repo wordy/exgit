@@ -33,6 +33,8 @@ class Event extends AppModel {
 		)
 	);
 
+//TODO: create afterFind() to set up potential incoming links
+
 /**
  * hasMany associations
  *
@@ -68,7 +70,28 @@ class Event extends AppModel {
         )
     );
     
-    
+    public function getTidByEid($event_id)
+    {
+        $rs = $this->findById($event_id);
+        $tid = $rs['Plan']['team_id'];
+        return $tid;
+    }
+
+    public function getBySameTime($event_id){
+        $matchtime = $this->field('stime',array('id'=>$event_id));
+        return $this->find('all', array('conditions'=>array('Event.stime'=>$matchtime)));
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

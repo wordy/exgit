@@ -1,0 +1,1200 @@
+2013-03-05 03:30:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'name' in order clause is ambiguous
+Request URL: /cakephp/ep/plans
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Plan`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Plan`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Plan`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Plan), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php(17): Controller->paginate()
+#8 [internal function]: PlansController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PlansController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PlansController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-05 07:18:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.2' in 'field list'
+Request URL: /cakephp/ep/events/test1/139
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Event`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Event`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(598): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('findById', Array, Object(Event))
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(64): Model->__call('findById', Array)
+#8 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(64): Event->findById('139', Array)
+#9 [internal function]: EventsController->test1('139')
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-05 07:19:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.2' in 'field list'
+Request URL: /cakephp/ep/events/test1/139
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Event`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Event`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(598): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('findById', Array, Object(Event))
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(64): Model->__call('findById', Array)
+#8 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(64): Event->findById('139', Array)
+#9 [internal function]: EventsController->test1('139')
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-05 08:12:30 Error: [MissingControllerException] Controller class EventController could not be found.
+Exception Attributes: array (
+  'class' => 'EventController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/event
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 08:12:59 Error: [MissingControllerException] Controller class EventController could not be found.
+Exception Attributes: array (
+  'class' => 'EventController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/event
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 08:13:07 Error: [MissingControllerException] Controller class EventController could not be found.
+Exception Attributes: array (
+  'class' => 'EventController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/event
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 08:13:35 Error: [MissingControllerException] Controller class EventController could not be found.
+Exception Attributes: array (
+  'class' => 'EventController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/event
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-05 08:47:41 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/view
+Stack Trace:
+#0 [internal function]: EventsController->view()
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-05 09:14:11 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\view.ctp, line 163]
+2013-03-05 09:14:11 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/ep/events/view/153
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 163)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 163, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 163, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-05 21:39:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ActivePlan.active_plan_id' in 'on clause'
+Request URL: /cakephp/ep/teams
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Team`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Team`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Team`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Team), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\TeamsController.php(17): Controller->paginate()
+#8 [internal function]: TeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-05 21:49:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ActivePlan.active_plan_id' in 'on clause'
+Request URL: /cakephp/ep/teams
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Team`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Team`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Team`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Team), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\TeamsController.php(17): Controller->paginate()
+#8 [internal function]: TeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-05 21:50:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ActivePlan.active_plan_id' in 'on clause'
+Request URL: /cakephp/ep/teams
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Team`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Team`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Team`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Team), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\TeamsController.php(17): Controller->paginate()
+#8 [internal function]: TeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-05 21:55:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 78]
+2013-03-05 21:55:26 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/plans/edit/7
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-05 21:56:58 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 78]
+2013-03-05 21:56:58 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/plans/edit/7
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-05 21:57:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 78]
+2013-03-05 21:57:14 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/plans/edit/7
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-05 21:57:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 78]
+2013-03-05 21:57:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/plans/edit/7
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 78, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 00:14:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Plan.code' in 'where clause'
+Request URL: /cakephp/ep/events/add
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Plan`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Plan`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Plan`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Plan), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(598): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('findByCode', Array, Object(Plan))
+#7 C:\XAMPP\htdocs\cakephp\ep\Model\Plan.php(64): Model->__call('findByCode', Array)
+#8 C:\XAMPP\htdocs\cakephp\ep\Model\Plan.php(64): Plan->findByCode(NULL)
+#9 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(89): Plan->isActive(NULL)
+#10 [internal function]: EventsController->add()
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-06 19:21:47 Error: [MissingControllerException] Controller class EventsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/events
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-06 19:54:48 Error: [MissingActionException] Action EventsController::getsel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getsel',
+)
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 19:54:55 Error: [MissingActionException] Action EventsController::getSel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getSel',
+)
+Request URL: /cakephp/ep/events/getSel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 19:55:23 Error: [MissingActionException] Action EventsController::get_sel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'get_sel',
+)
+Request URL: /cakephp/ep/events/get_sel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 19:56:54 Error: [MissingActionException] Action EventsController::get_sel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'get_sel',
+)
+Request URL: /cakephp/ep/events/get_sel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 20:37:09 Error: [MissingActionException] Action EventsController::getsel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getsel',
+)
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 20:41:14 Error: [MissingActionException] Action EventsController::getsel() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getsel',
+)
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-06 20:42:49 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php, line 186]
+2013-03-06 20:42:49 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 186)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 186, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 186, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 20:43:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'debug' at line 1
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('debug', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('debug', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('debug', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('debug', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Model->__call('debug', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Event->debug(NULL)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('168')
+#8 [internal function]: EventsController->getsel('168')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-06 20:44:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'debug' at line 1
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('debug', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('debug', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('debug', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('debug', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Model->__call('debug', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Event->debug(NULL)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('168')
+#8 [internal function]: EventsController->getsel('168')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-06 20:44:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'debug' at line 1
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('debug', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('debug', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('debug', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('debug', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Model->__call('debug', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(75): Event->debug(NULL)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('168')
+#8 [internal function]: EventsController->getsel('168')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-06 20:45:34 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'recursive' at line 1
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('recursive', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('recursive', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('recursive', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('recursive', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(73): Model->__call('recursive', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(73): Event->recursive('2')
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('168')
+#8 [internal function]: EventsController->getsel('168')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-06 20:45:51 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'debug' at line 1
+Request URL: /cakephp/ep/events/getsel/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('debug', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('debug', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('debug', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('debug', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(76): Model->__call('debug', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(76): Event->debug(NULL)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('168')
+#8 [internal function]: EventsController->getsel('168')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-06 20:54:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.sec_group_id' in 'field list'
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(82): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('158')
+#7 [internal function]: EventsController->getsel('158')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-06 20:54:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PriLink.sec_group_id' in 'field list'
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(82): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(144): Event->getSelectedTeams('158')
+#7 [internal function]: EventsController->getsel('158')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-06 21:00:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'getSelectedTeams' at line 1
+Request URL: /cakephp/ep/events/edit/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('getSelectedTeam...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('getSelectedTeam...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('getSelectedTeam...', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('getSelectedTeam...', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(172): Model->__call('getSelectedTeam...', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(172): EventsTeam->getSelectedTeams('168')
+#7 [internal function]: EventsController->edit('168')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-06 21:02:56 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 144]
+2013-03-06 21:02:56 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:03:13 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 144]
+2013-03-06 21:03:13 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:03:44 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 144]
+2013-03-06 21:03:44 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:04:11 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 144]
+2013-03-06 21:04:11 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:05:40 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 144]
+2013-03-06 21:05:40 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/getsel/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 144, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:12:42 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting ',' or ';' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\edit.ctp, line 16]
+2013-03-06 21:12:42 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting ',' or ';'
+Request URL: /cakephp/ep/events/edit/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:30:53 Error: 
+2013-03-06 21:31:02 Error: 
+2013-03-06 21:56:50 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\edit.ctp, line 21]
+2013-03-06 21:56:50 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/ep/events/edit/145
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 21, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 21, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-06 21:57:16 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\edit.ctp, line 30]
+2013-03-06 21:57:16 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/ep/events/edit/145
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 30, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 30, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 18:23:47 Error: [MissingActionException] Action EventsController::debug_req() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'debug_req',
+)
+Request URL: /cakephp/ep/events/debug_req/167
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-07 18:49:41 Error: Fatal Error (1): Call to a member function getSelectedTeams() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 172]
+2013-03-07 18:49:41 Error: [FatalErrorException] Call to a member function getSelectedTeams() on a non-object
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 172)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 172, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 172, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 18:55:44 Error: Fatal Error (1): Call to undefined method EventsController::debug() in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 179]
+2013-03-07 18:55:44 Error: [FatalErrorException] Call to undefined method EventsController::debug()
+Request URL: /cakephp/ep/events/edit/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 179)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 179, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\XAMPP\htdocs...', 179, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 20:12:01 Error: Fatal Error (64): Cannot use [] for reading in [C:\XAMPP\htdocs\cakephp\ep\View\Events\debug_req.ctp, line 32]
+2013-03-07 20:12:01 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 20:12:31 Error: Fatal Error (64): Cannot use [] for reading in [C:\XAMPP\htdocs\cakephp\ep\View\Events\debug_req.ctp, line 32]
+2013-03-07 20:12:31 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 20:12:58 Error: Fatal Error (64): Cannot use [] for reading in [C:\XAMPP\htdocs\cakephp\ep\View\Events\debug_req.ctp, line 32]
+2013-03-07 20:12:58 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\XAMPP\htdocs...', 32, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 21:04:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pri_team_id' cannot be null
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ex...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ex...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1734): DboSource->create(Object(EventsTeam), Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(206): Model->save(Array)
+#5 [internal function]: EventsController->edit('158')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-07 21:09:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pri_team_id' cannot be null
+Request URL: /cakephp/ep/events/edit/158
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ex...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ex...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1734): DboSource->create(Object(EventsTeam), Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(212): Model->save(Array)
+#5 [internal function]: EventsController->edit('158')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-07 21:10:09 Error: Fatal Error (4): syntax error, unexpected T_ECHO, expecting ',' or ';' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\edit.ctp, line 16]
+2013-03-07 21:10:09 Error: [FatalErrorException] syntax error, unexpected T_ECHO, expecting ',' or ';'
+Request URL: /cakephp/ep/events/edit/171
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 16, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 22:46:19 Error: Fatal Error (4): syntax error, unexpected T_ELSE, expecting T_FUNCTION in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 270]
+2013-03-07 22:46:19 Error: [FatalErrorException] syntax error, unexpected T_ELSE, expecting T_FUNCTION
+Request URL: /cakephp/ep/events/edit/168
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 22:48:01 Error: Fatal Error (4): syntax error, unexpected T_ELSE, expecting T_FUNCTION in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 270]
+2013-03-07 22:48:01 Error: [FatalErrorException] syntax error, unexpected T_ELSE, expecting T_FUNCTION
+Request URL: /cakephp/ep/events
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 270, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-07 22:52:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pri_team_id' cannot be null
+Request URL: /cakephp/ep/events/edit/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ex...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ex...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1734): DboSource->create(Object(EventsTeam), Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(212): Model->save(Array)
+#5 [internal function]: EventsController->edit('173')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-07 22:54:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pri_team_id' cannot be null
+Request URL: /cakephp/ep/events/edit/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ex...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ex...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1734): DboSource->create(Object(EventsTeam), Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->save(Array)
+#5 [internal function]: EventsController->edit('173')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-07 22:59:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'conditions' in 'where clause'
+Request URL: /cakephp/ep/events/edit/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('UPDATE `executi...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\Database\Mysql.php(378): DboSource->execute('UPDATE `executi...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2370): Mysql->update(Object(EventsTeam), Array, NULL, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(239): Model->updateAll(Array, Array)
+#5 [internal function]: EventsController->edit('173')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-07 23:01:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'conditions' in 'where clause'
+Request URL: /cakephp/ep/events/edit/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('UPDATE `executi...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\Database\Mysql.php(378): DboSource->execute('UPDATE `executi...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2370): Mysql->update(Object(EventsTeam), Array, NULL, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(241): Model->updateAll(Array, Array)
+#5 [internal function]: EventsController->edit('173')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-08 00:13:29 Error: [MissingActionException] Action EventsController::getByEvent() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getByEvent',
+)
+Request URL: /cakephp/ep/events/getByEvent/175
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-08 01:44:49 Error: Fatal Error (1): Call to a member function inputs() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\View\Events\edit.ctp, line 24]
+2013-03-08 01:44:49 Error: [FatalErrorException] Call to a member function inputs() on a non-object
+Request URL: /cakephp/ep/events/edit/175
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 24, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 24, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 03:55:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Etype.etype_id' in 'where clause'
+Request URL: /cakephp/ep/events/view/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Etype`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Etype`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Etype`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Etype), 'hasOne', 'Etype', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(53): Model->find('first', Array)
+#8 [internal function]: EventsController->view('173')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 03:57:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Etype.etype_id' in 'where clause'
+Request URL: /cakephp/ep/events/view/175
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Etype`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Etype`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Etype`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Etype), 'hasOne', 'Etype', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(53): Model->find('first', Array)
+#8 [internal function]: EventsController->view('175')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 04:00:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Etype.etype_id' in 'where clause'
+Request URL: /cakephp/ep/events/view/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Etype`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Etype`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Etype`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Etype), 'hasOne', 'Etype', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(53): Model->find('first', Array)
+#8 [internal function]: EventsController->view('173')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 04:00:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Etype.etype_id' in 'where clause'
+Request URL: /cakephp/ep/events/view/175
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Etype`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Etype`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Etype`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Etype), 'hasOne', 'Etype', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(53): Model->find('first', Array)
+#8 [internal function]: EventsController->view('175')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 04:04:36 Error: [NotFoundException] Invalid events team
+Request URL: /cakephp/ep/events_teams/delete/196
+Stack Trace:
+#0 [internal function]: EventsTeamsController->delete('196')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:04:46 Error: [NotFoundException] Invalid events team
+Request URL: /cakephp/ep/events_teams/delete/196
+Stack Trace:
+#0 [internal function]: EventsTeamsController->delete('196')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:05:15 Error: [NotFoundException] Invalid events team
+Request URL: /cakephp/ep/events_teams/delete/188
+Stack Trace:
+#0 [internal function]: EventsTeamsController->delete('188')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:08:45 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/view/1732323
+Stack Trace:
+#0 [internal function]: EventsController->view('1732323')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:08:53 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/edit/309283902
+Stack Trace:
+#0 [internal function]: EventsController->edit('309283902')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:09:53 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/edit/309283902
+Stack Trace:
+#0 [internal function]: EventsController->edit('309283902')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:10:29 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/edit/309283902
+Stack Trace:
+#0 [internal function]: EventsController->edit('309283902')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:18:17 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/view/174
+Stack Trace:
+#0 [internal function]: EventsController->view('174')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:18:39 Error: [NotFoundException] Invalid event
+Request URL: /cakephp/ep/events/view/174
+Stack Trace:
+#0 [internal function]: EventsController->view('174')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-08 04:22:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pri_team_id' cannot be null
+Request URL: /cakephp/ep/events/edit/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ex...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ex...')
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1734): DboSource->create(Object(EventsTeam), Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(201): Model->save(Array)
+#5 [internal function]: EventsController->edit('173')
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-08 07:57:31 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('id DESC')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(17): Controller->paginate(Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:00:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('desc')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:02:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /cakephp/ep/events_teams/index/sort:id/direction:asc
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:02:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /cakephp/ep/events_teams/index
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:02:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:03:16 Error: [MissingModelException] PriLink
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('PriLink', Array, Array)
+#1 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('PriLink', Array)
+#2 [internal function]: EventsTeamsController->index()
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-03-08 08:04:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('dec')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:04:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('desc')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:05:17 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('desc')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 08:05:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order = ('desc')    LIMIT 20' at line 1
+Request URL: /cakephp/ep/events_teams/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `EventsT...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `EventsT...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `EventsT...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(195): Model->find('all', Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(1073): PaginatorComponent->paginate('EventsTeam', Array, Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsTeamsController.php(19): Controller->paginate('EventsTeam', Array)
+#8 [internal function]: EventsTeamsController->index()
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsTeamsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsTeamsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-08 11:40:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 11:41:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 11:41:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 11:42:33 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(85): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 11:44:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(87): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(87): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 11:45:51 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /cakephp/ep/events/edit/179
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('update', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('update', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('update', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('update', Array, Object(EventsTeam))
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(87): Model->__call('update', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(87): EventsTeam->update(Array, Array)
+#7 [internal function]: EventsTeam->beforeDelete(true)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Event\CakeEventManager.php(245): call_user_func_array(Array, Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2389): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(213): Model->delete('226')
+#11 [internal function]: EventsController->edit('179')
+#12 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#13 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#14 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-08 21:09:21 Error: [MissingActionException] Action EventsController::gettidbyeid() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'gettidbyeid',
+)
+Request URL: /cakephp/ep/events/gettidbyeid/180
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-08 21:09:29 Error: [MissingActionException] Action EventsController::getTidByEid() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'getTidByEid',
+)
+Request URL: /cakephp/ep/events/getTidByEid/180
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-08 21:11:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Plan.team_id' in 'field list'
+Request URL: /cakephp/ep/events/getteam/180
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Plan`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Plan`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Plan`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1551): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Event.php(79): Model->field('Plan.team_id', Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(365): Event->getTidByEid('180')
+#8 [internal function]: EventsController->getteam('180')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

@@ -12,8 +12,11 @@ class EventsTeamsController extends AppController {
  *
  * @return void
  */
+ //public $paginate
+ 
 	public function index() {
 		$this->EventsTeam->recursive = 0;
+        $this->paginate('EventsTeam', array('EventsTeam.id'=>'desc'));
 		$this->set('eventsTeams', $this->paginate());
 	}
 
@@ -110,4 +113,48 @@ class EventsTeamsController extends AppController {
 		$this->Session->setFlash(__('Events team was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+
+
+    public function getEtypeByEvent($eid){
+                    
+        
+        return $this->EventsTeam->field('etype_id', array('event_id'=>$eid)); 
+        
+        
+    
+    }
+    //$cascade = true
+    public function bdel($id){
+        //$rs = $this->PriLink->findById($this->id);
+        $rs = $this->PriLink->findById($id);
+        $pri_t = $rs['PriLink']['pri_team_id']; //me PRO
+        $sec_t = $rs['PriLink']['sec_team_id']; //them CC
+        $m_time = $rs['Event']['stime'];
+        $l_id = $rs['Event']['linked_event_id'];
+        
+        if(!empty($l_id)){
+        $rev_events = $this->PriLink->Event->find('list',array(
+            'conditions'=>array(
+                'PriLink.pri_team_id'=>$sec_t, // CC's events
+                'PriLink.sec_team_id'=>$pri_t, // have me as sec
+                'Event.stime'=>$m_time),       // at same time
+            'fields'=>'Event.id'));
+        
+        if(!empty($rev_events)){
+        
+        $tochange = Hash::extract($rev_events,'{n}');
+        
+        
+        
+        
+        }
+            
+            
+        }
+         
+        
+                $this->render('events/debug_req');
+        
+            }
+
 }

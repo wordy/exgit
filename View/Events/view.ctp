@@ -78,6 +78,7 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('E_id'); ?></th>
+		<th><?php echo __('LE_id'); ?></th>
 		<th><?php echo __('Start'); ?></th>
         <th><?php echo __('Type'); ?></th>		
 		<th><?php echo __('Lead Team'); ?></th>
@@ -93,6 +94,7 @@
 		foreach ($event['PriLink'] as $pl): ?>
 		<tr>
             <td><?php echo $pl['Event']['id']; ?></td>
+            <td><?php echo $pl['linked_event_id']; ?></td>
             <td><?php echo $this->Time->format('n/j H:i:s',$pl['Event']['stime']); ?></td>
 			<td><?php echo (!empty($pl['Etype']['code']) ? $pl['Etype']['code']:''); ?></td>
 			<td>
@@ -150,6 +152,7 @@
     <table cellpadding = "0" cellspacing = "0">
     <tr>
         <th><?php echo __('E_id'); ?></th>
+        <th><?php echo __('LE_id'); ?></th>
         <th><?php echo __('Start'); ?></th>
         <th><?php echo __('Type'); ?></th>
         <th><?php echo __('Lead Team'); ?></th>
@@ -165,6 +168,7 @@
         foreach ($event['SecLink'] as $sl): ?>
         <tr>
             <td><?php echo $sl['Event']['id']; ?></td>
+            <td><?php echo $sl['linked_event_id']; ?></td>
 
             <td><?php echo $this->Time->format('n/j H:i:s',$sl['Event']['stime']); ?></td>
             <td><?php echo (!empty($sl['Etype']['code']) ? $sl['Etype']['code']:''); ?></td>

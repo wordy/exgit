@@ -70,6 +70,20 @@ class Event extends AppModel {
         )
     );
     
+    public function getSecTeams($eventid){
+        
+        
+    }
+    
+    public function getStime($eventid){
+        $rs = $this->findById($eventid);
+        
+        $stime = $rs['Event']['stime'];
+        
+        return $stime;
+        
+    }
+    
     public function getTidByEid($event_id)
     {
         $rs = $this->findById($event_id);
@@ -83,16 +97,21 @@ class Event extends AppModel {
     }
 
 
-public function trycontain($eventid){
+public function trycontain($stime){
         //$tobec = array('PriLink','Event','Event.Plan');
           $tobec = null;  
           
           $tobec2 = array(
-          'PriLink'=>array(
-            'conditions'=>array(
-                'PriLink.event_id =' => $eventid)));
-                //$this->recursive=-1;
-            $rs= $this->find('all', array('contain'=>$tobec2, 'recursive'=>-1));
+            'SecLink',
+            'PriLink.Event',
+           
+            'PriLink.PriTeam',
+            'PriLink.SecTeam',
+            'PriLink'=>array(
+                'conditions'=>array()));
+          
+            $rs= $this->find('all', array('contain'=>$tobec2, 'recursive'=>3, 'conditions'=>array(
+                'Event.stime'=>$stime)));
             
             return $rs; 
         

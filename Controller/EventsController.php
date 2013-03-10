@@ -32,6 +32,7 @@ class EventsController extends AppController {
         $this -> Event -> recursive = 0;
         $this -> paginate = array('order' => 'Event.id DESC');
         $this -> set('events', $this -> paginate());
+        $this->render('index2');
     }
 
     /**
@@ -58,6 +59,39 @@ class EventsController extends AppController {
         $this -> set('event', $this -> Event -> find('first', $options));
     }
 
+    public function viewByPlan($planid = null) {
+        if (!$this->Event->Plan->exists($planid)) {
+            throw new NotFoundException(__('Invalid event'));
+        }
+        $tobc = array(
+            'PriLink'=>array(
+                'Etype',
+                'PriTeam',
+                'SecTeam',
+                'Event'=>array(
+                    'conditions'=>array(
+                        'plan_id'=>$planid))),
+            'SecLink'=>array(
+                'Etype',
+                'PriTeam',
+                'SecTeam',
+                'Event'),
+            'Plan'=>array( 
+                'Team',
+                'fields'=>array('id','name','team_id','active')), 
+            );
+        $options = array(
+            'contain' => $tobc,
+            'fields'=>array(
+                'id','plan_id','stime','etime','description','comment','private','active')
+            );
+       // $this -> set('events', $this -> Event -> paginate('Events', $options));
+        $this -> set('events', $this -> Event -> find('all', $options));
+        $this->render('view_by_plan');
+    }
+
+
+
     /**
      * add method
      *
@@ -80,16 +114,14 @@ class EventsController extends AppController {
 
     public function add() {
         if ($this -> request -> is('post')) {
-           // $this -> log($this -> request -> data, 'debug');
             $priteam = $this -> request -> data['Event']['PriTeam'];
             $secteams = $this -> request -> data['Event']['SecTeam'];
             $etype = $this -> request -> data['PriLink']['etype_id'];
 
             // Check if plan_id is active team's plan... if so, make the linkage active
             if ($this -> Event -> Plan -> isActive($this -> request -> data['Event']['plan_id'])) {
-                $linkactive = 1;
-            } else { $linkactive = 0;
-            }
+                $linkactive = 1;} 
+            else { $linkactive = 0; }
 
             $this -> Event -> create();
             if ($this -> Event -> save($this -> request -> data)) {
@@ -97,7 +129,9 @@ class EventsController extends AppController {
 
                 foreach ($secteams as $key => $gid) {
                     $secdata['PriLink'] = array();
+                    
                     $this -> Event -> PriLink -> create();
+                    
                     $secdata['event_id'] = $event_id;
                     $secdata['pri_team_id'] = $priteam;
                     $secdata['sec_team_id'] = $gid;
@@ -114,6 +148,12 @@ class EventsController extends AppController {
                 $this -> Session -> setFlash(__('The event could not be saved. Please, try again.'));
             }
         }
+
+        //Not posting data to be saved, must want to enter a new event...
+        
+        //TODO: $tid = $this->session('tid').  if isset($tid){ find('list', array('team_id'=>$tid))} else{find('list')}
+        // or better yet, keep current editing plan in session, only allow them to add to it
+        
         $plans = $this -> Event -> Plan -> find('list');
         $teams = $this -> Event -> PriLink -> PriTeam -> find('list');
         $etypes = $this -> Event -> PriLink -> Etype -> find('list');
@@ -374,13 +414,34 @@ class EventsController extends AppController {
         
     }
     
-    public function trycont($event){
-     $this->set('out1', $this->Event->trycontain($event));
+    public function trycont($eventid){
+        
+        $stime = $this->Event->getStime($eventid);
+     $this->set('out1', $this->Event->trycontain($stime));
      
      $this->render('/events/debug_req');   
         
     }
     
-    
+    public function getRel($eid) {
+        
+        $stime = $this->Event->getStime($eid);
+        
+        $rs = $this->Event->PriLink->find('all', array(
+            'contain'=>array(
+                'Event'=>array(
+                    'Plan',
+                    'conditions'=>array(
+                        'Event.stime'=>$stime),
+                    'fields'=>array('Event.*'))
+                )));
+            
+        //$etype = $this -> Event -> PriLink -> field('etype_id', array('event_id' => $eid));
+
+         $this -> set('out1', $rs);
+
+        $this -> render('/events/debug_req');
+
+    }
 
 }

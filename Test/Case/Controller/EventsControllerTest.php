@@ -21,6 +21,22 @@ class EventsControllerTest extends ControllerTestCase {
 	);
 
 /**
+ * testDebugReq method
+ *
+ * @return void
+ */
+	public function testDebugReq() {
+	}
+
+/**
+ * testViewEvents method
+ *
+ * @return void
+ */
+	public function testViewEvents() {
+	}
+
+/**
  * testIndex method
  *
  * @return void
@@ -37,11 +53,51 @@ class EventsControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testViewORIG method
+ *
+ * @return void
+ */
+	public function testViewORIG() {
+	}
+
+/**
+ * testViewByPlan method
+ *
+ * @return void
+ */
+	public function testViewByPlan() {
+	}
+
+/**
+ * testTest1 method
+ *
+ * @return void
+ */
+	public function testTest1() {
+	}
+
+/**
  * testAdd method
  *
  * @return void
  */
 	public function testAdd() {
+	}
+
+/**
+ * testAddORIG method
+ *
+ * @return void
+ */
+	public function testAddORIG() {
+	}
+
+/**
+ * testGetsel method
+ *
+ * @return void
+ */
+	public function testGetsel() {
 	}
 
 /**
@@ -58,6 +114,78 @@ class EventsControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testDelete() {
+	}
+
+/**
+ * testAdminIndex method
+ *
+ * @return void
+ */
+	public function testAdminIndex() {
+	}
+
+/**
+ * testAdminView method
+ *
+ * @return void
+ */
+	public function testAdminView() {
+	}
+
+/**
+ * testAdminAdd method
+ *
+ * @return void
+ */
+	public function testAdminAdd() {
+	}
+
+/**
+ * testAdminEdit method
+ *
+ * @return void
+ */
+	public function testAdminEdit() {
+	}
+
+/**
+ * testAdminDelete method
+ *
+ * @return void
+ */
+	public function testAdminDelete() {
+	}
+
+/**
+ * testGetEtypeByEvent method
+ *
+ * @return void
+ */
+	public function testGetEtypeByEvent() {
+	}
+
+/**
+ * testGetteam method
+ *
+ * @return void
+ */
+	public function testGetteam() {
+	}
+
+/**
+ * testGetsame method
+ *
+ * @return void
+ */
+	public function testGetsame() {
+	}
+
+/**
+ * testTrycont method
+ *
+ * @return void
+ */
+	public function testTrycont() {
 	}
 
 }

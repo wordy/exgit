@@ -1347,3 +1347,127 @@ Stack Trace:
 #3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-03-08 23:22:45 Error: [MissingControllerException] Controller class PrilinkController could not be found.
+Exception Attributes: array (
+  'class' => 'PrilinkController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/ep/prilink/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-08 23:25:52 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 1887977 bytes) in [C:\XAMPP\htdocs\cakephp\lib\Cake\Cache\Engine\FileEngine.php, line 129]
+2013-03-08 23:25:52 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 1887977 bytes)
+Request URL: /cakephp/ep/events_teams/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 23:26:22 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 11400704 bytes) in [C:\XAMPP\htdocs\cakephp\lib\Cake\Cache\Engine\FileEngine.php, line 129]
+2013-03-08 23:26:22 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 11400704 bytes)
+Request URL: /cakephp/ep/events_teams/trycont/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 23:28:08 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 11330240 bytes) in [C:\XAMPP\htdocs\cakephp\lib\Cake\Cache\Engine\FileEngine.php, line 129]
+2013-03-08 23:28:08 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 11330240 bytes)
+Request URL: /cakephp/ep/events_teams/trycont/172
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 23:28:24 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 11330112 bytes) in [C:\XAMPP\htdocs\cakephp\lib\Cake\Cache\Engine\FileEngine.php, line 129]
+2013-03-08 23:28:24 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 11330112 bytes)
+Request URL: /cakephp/ep/events_teams/trycont/172
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\XAMPP\htdocs...', 129, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-08 23:57:25 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\Events\view_by_plan.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\Events\\view_by_plan.ctp',
+)
+Request URL: /cakephp/ep/events/viewByPlan/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-09 00:14:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'paginate' at line 1
+Request URL: /cakephp/ep/events/viewByPlan/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('paginate', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('paginate', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('paginate', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('paginate', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Model->__call('paginate', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Event->paginate('Event', Array)
+#7 [internal function]: EventsController->viewByPlan('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-09 00:14:45 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'paginate' at line 1
+Request URL: /cakephp/ep/events/viewByPlan/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('paginate', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('paginate', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('paginate', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('paginate', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Model->__call('paginate', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Event->paginate('Events', Array)
+#7 [internal function]: EventsController->viewByPlan('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-09 00:14:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'paginate' at line 1
+Request URL: /cakephp/ep/events/viewByPlan/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('paginate', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('paginate', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('paginate', Array, Array)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(799): DboSource->query('paginate', Array, Object(Event))
+#5 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Model->__call('paginate', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(87): Event->paginate(Array)
+#7 [internal function]: EventsController->viewByPlan('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-09 09:24:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.stime' in 'where clause'
+Request URL: /cakephp/ep/events/getRel/173
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(433): Model->find('list', Array)
+#6 [internal function]: EventsController->getRel('173')
+#7 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

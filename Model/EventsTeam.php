@@ -131,8 +131,62 @@ class EventsTeam extends AppModel {
         
     }
     
-    
+    // 3/9 edit
     public function beforeSave($options = array()) {
+        
+            $steam = $this->data['PriLink']['sec_team_id'];
+            $pteam = $this->data['PriLink']['pri_team_id'];
+            $eid_to_match = $this->data['PriLink']['event_id'];
+            
+            // The time of event we're matching
+            $match_time = $this->Event->field('stime', array(
+                'id'=>$eid_to_match));
+            
+            //TODO: Containable may be able to combine
+            //      the next two finds
+            
+            // Find all reverse relations, get event IDs
+            $revevents = $this->find('list', array(
+                'conditions'=>array(
+                    'PriLink.pri_team_id'=>$steam,
+                    'PriLink.sec_team_id'=>$pteam),
+                'fields'=>array(
+                    'PriLink.event_id'))); 
+            $eids = Hash::extract($revevents, '{n}');      
+            
+            // Find events 
+            $sametime = $this->Event->find('list', array(
+                'conditions'=>array(
+                    'Event.id'=>$eids,
+                    'Event.stime'=> $match_time),
+                'fields'=>array(
+                    'Event.id')
+                    ));
+                     
+            // Get eid of matched event(s) -- Should only be one.
+            // Returns an array, so must pull eid out
+            $matchedid = Hash::extract($sametime, '{n}');
+                
+                
+                // Pull eid out, and set it to data to be saved
+                if (!empty($matchedid)){
+                    $matchedid = $matchedid[0];
+                    $this->data['PriLink']['linked_event_id']=$matchedid;
+                   
+                   //Using updateAll on a single record to avoid having to re-set $this->id before save
+                   $this->updateAll(
+                   array('linked_event_id'=>$eid_to_match), array(
+                        'event_id'=>$matchedid, 
+                        'pri_team_id'=>$steam,
+                        'sec_team_id'=>$pteam
+                        )); 
+                }
+        
+    return true;
+    }
+    
+    
+    public function beforeSave_pre392013($options = array()) {
         // Only activate if there is a secondary team to be saved
         if (!empty($this->data['PriLink']['sec_team_id'])) {
             $steam = $this->data['PriLink']['sec_team_id'];
@@ -272,20 +326,33 @@ class EventsTeam extends AppModel {
     }
     
    public function trycontain($eventid){
+       
+       $stime = $this->Event->getSTime($eventid);
+       
+       //$this->log($stime, 'debug');
         //$tobec = array('PriLink','Event','Event.Plan');
           $tobec = null;  
           
           $tobec2 = array(
-          'LinkedEvent',
           'Event'=>array(
             'conditions'=>array(
-                'Event.id'  => $eventid),
-            'fields'=>array('Event.id'))
+                'Event.stime'=>$stime),
+            'fields'=>array(
+                'Event.*'))
+          //'LinkedEvent'
            );
+           
+            $tobec3 = array(
+          'LinkedEvent',
+          'Event'
+            
+           );
+           
                 //$this->recursive=-1;
                 
-            $tobec3 = array('Event.id = '.$eventid);
-            $rs= $this->find('all', array('contain'=>$tobec2,'recursive'=>2));
+            
+            $rs= $this->find('all', array('recursive'=>2,'conditions'=>array(
+                'EventsTeam.event_id'=>$eventid)));
             
             return $rs; 
         

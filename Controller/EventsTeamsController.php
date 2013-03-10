@@ -165,6 +165,21 @@ public function trycont($event){
         
     }
 
+    public function dsearch($eventid){
+        
+        // given an event, find possible events that can link to it
+        
+        // find all primary linkages from this event:
+        
+        $this->EventsTeam->Event->find('list', array(
+            'conditions'=>array(
+                'PriLink.event_id' =>$eventid,
+                
+                )));
+        
+        
+    } 
+
 
 
 

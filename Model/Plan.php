@@ -65,6 +65,18 @@ class Plan extends AppModel {
                 return true; }
             else{ return false;}
         }
+    
+    
+    
+    public function getActiveByTeam($teamid){
+        $act_plan = $this->field('id', array('team_id'=>$teamid, 'active'=>1));
+        //$this->log($act_plan, 'debug');
+        //$act_pid = $act_plan['Plan']['id'];
+       
+       return $act_plan;
+        
+        
+    }
 
         
         

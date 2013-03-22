@@ -204,7 +204,8 @@ class EventsController extends AppController {
             } else { $linkactive = 0;
             }
 
-            $etype = $this -> request -> data['PriLink']['etype_id'];
+            //$etype = $this -> request -> data['PriLink']['etype_id'];
+            $etype = $this -> request -> data['Event']['etype_id'];
             $new_seclinks = $this -> request -> data['PriLink']['SecTeam'];
             $old_seclinks = $this -> Event -> PriLink -> getSelectedTeams($id);
 
@@ -443,5 +444,99 @@ class EventsController extends AppController {
         $this -> render('/events/debug_req');
 
     }
+    
+    //TODO: Allow function to find non-active events too 
+    public function makePlanByTeam($teamid=null, $active=array(0,1), $private=array(0,1)){
+        
+        // if no team is given, show all     
+        if (empty($teamid)){
+            $teamid = Hash::extract($this->Event->PriLink->PriTeam->find('list', array('fields'=>'id')), '{n}');
+        }    
+        $sec_eids = $this->Event->PriLink->getAllLinksByTeam($teamid);
+        $plan_id = $this->Event->Plan->getActiveByTeam($teamid);
+        
+        
+        // Use Containable to substantially limit results
+        $tobec = array(
+            'Plan.id', 'Plan.name','Plan.team_id','Plan.Team.code',
+            'Etype.id','Etype.code',
+            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Etype.code',
+            'PriLink','PriLink.Event'=>array(
+                'fields'=>array(
+                    'id','plan_id','stime','etime','description','comment','private')),
+            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Etype.code'
+            );
+        
+        // Limiting Event fields (mostly just created/updated and #links)
+        $limfields = array('id','plan_id','stime','etime','description','comment','private','active');
+        
+        $events = $this->Event->find('all', array(
+            'conditions'=>array(
+                'OR'=>array(
+                    'Event.id'=>$sec_eids,
+                    'Event.plan_id'=>$plan_id),
+                'AND'=>array(
+                    'Event.active'=>$active,
+                    'Event.private'=>$private)),
+            'order'=>array(
+                'Event.stime ASC'),
+            'recursive'=>2,
+            'contain'=>$tobec,
+            'fields'=>$limfields));
+                        
+        $this->set('events', $events);
+        //$this->render('debug_req');
+        $this->render('make_plan');
+        
+        
+    }
+
+    public function makePlanByTeam2($teamid, $active=array(0,1), $private=array(0,1)){
+        $sec_eids = $this->Event->PriLink->getLinksByTeam($teamid);
+        $plan_id = $this->Event->Plan->getActiveByTeam($teamid);
+        
+        
+        // Use Containable to substantially limit results
+        $tobec = array(
+            'Plan.id', 'Plan.name','Plan.team_id','Plan.Team.code',
+            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Etype.code',
+            'PriLink','PriLink.Event'=>array(
+                'fields'=>array(
+                    'id','plan_id','stime','etime','description','comment','private')),
+            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Etype.code'
+            );
+        
+        // Limiting Event fields (mostly just created/updated and #links)
+        $limfields = array('id','plan_id','stime','etime','description','comment','private','active');
+        
+        $events = $this->Event->find('all', array(
+            'conditions'=>array(
+                'OR'=>array(
+                    'Event.id'=>$sec_eids,
+                    'Event.plan_id'=>$plan_id),
+                'AND'=>array(
+                    'Event.active'=>$active,
+                    'Event.private'=>$private)),
+            'order'=>array(
+                'Event.stime ASC'),
+            'recursive'=>2,
+            'contain'=>$tobec,
+            'fields'=>$limfields));
+                        
+        $this->set('events', $events);
+        $this->render('debug_req');
+        //$this->render('view_plan');
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+    }
+    
 
 }

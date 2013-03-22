@@ -35,7 +35,11 @@ class Etype extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		)
+		),
+		
+       'Events'=>array(
+            'className'=> 'Events',
+            'foreignKey'=> 'etype_id')
 	);
 
 }

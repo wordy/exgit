@@ -6,3 +6,155 @@
 2013-03-08 23:00:08 Debug: 2013-02-26 01:30:00
 2013-03-08 23:00:51 Debug: 2013-03-07 22:30:00
 2013-03-08 23:22:17 Debug: 2013-03-07 22:30:00
+2013-03-13 13:47:08 Debug: Array
+(
+)
+
+2013-03-13 13:47:43 Debug: 1
+2013-03-13 13:48:28 Debug: 1
+2013-03-13 13:48:46 Debug: 1
+2013-03-13 13:49:15 Debug: 1
+2013-03-13 13:50:31 Debug: 1
+2013-03-13 13:50:46 Debug: 1
+2013-03-13 13:53:06 Debug: 1
+2013-03-13 13:53:35 Debug: 1
+2013-03-13 13:53:39 Debug: 1
+2013-03-13 13:54:49 Debug: 1
+2013-03-13 13:55:04 Debug: 
+2013-03-13 13:55:42 Debug: 13
+2013-03-13 13:56:40 Debug: 10
+2013-03-13 13:57:54 Debug: 10
+2013-03-13 13:58:29 Debug: 10
+2013-03-13 21:49:33 Debug: 10
+2013-03-20 10:36:21 Debug: Array
+(
+    [PriLink] => Array
+        (
+            [id] => 231
+            [event_id] => 182
+            [pri_team_id] => 3
+            [sec_team_id] => 6
+            [linked_event_id] => 
+            [etype_id] => 2
+            [active] => 1
+        )
+
+    [Event] => Array
+        (
+            [id] => 182
+            [plan_id] => 7
+            [stime] => 2013-03-20 10:25:00
+            [etime] => 2013-03-20 10:29:00
+            [description] => CC To Cue GS, VM, IT
+            [comment] => 
+            [private] => 
+            [active] => 1
+            [created] => 2013-03-20 10:25:45
+            [modified] => 2013-03-20 10:36:21
+            [num_sec_teams] => 
+        )
+
+    [LinkedEvent] => Array
+        (
+            [id] => 
+            [plan_id] => 
+            [stime] => 
+            [etime] => 
+            [description] => 
+            [comment] => 
+            [private] => 
+            [active] => 
+            [created] => 
+            [modified] => 
+            [num_sec_teams] => 
+        )
+
+    [PriTeam] => Array
+        (
+            [id] => 3
+            [name] => Co-Chairs
+            [code] => CC
+        )
+
+    [SecTeam] => Array
+        (
+            [id] => 6
+            [name] => Volunteer Management
+            [code] => VM
+        )
+
+    [Etype] => Array
+        (
+            [id] => 2
+            [code] => CUE
+            [description] => A cue to be given by current group, or expected from another group
+        )
+
+)
+
+2013-03-20 10:54:03 Debug: Array
+(
+    [PriLink] => Array
+        (
+            [id] => 245
+            [event_id] => 191
+            [pri_team_id] => 14
+            [sec_team_id] => 9
+            [linked_event_id] => 
+            [etype_id] => 4
+            [active] => 1
+        )
+
+    [Event] => Array
+        (
+            [id] => 191
+            [plan_id] => 13
+            [stime] => 2013-03-20 10:45:00
+            [etime] => 2013-03-20 10:49:00
+            [description] => FMM TO REQ FROM MANY
+            [comment] => 
+            [private] => 
+            [active] => 1
+            [created] => 2013-03-20 10:50:27
+            [modified] => 2013-03-20 10:54:03
+            [num_sec_teams] => 14
+        )
+
+    [LinkedEvent] => Array
+        (
+            [id] => 
+            [plan_id] => 
+            [stime] => 
+            [etime] => 
+            [description] => 
+            [comment] => 
+            [private] => 
+            [active] => 
+            [created] => 
+            [modified] => 
+            [num_sec_teams] => 
+        )
+
+    [PriTeam] => Array
+        (
+            [id] => 14
+            [name] => Materials Management
+            [code] => FMM
+        )
+
+    [SecTeam] => Array
+        (
+            [id] => 9
+            [name] => Production Support
+            [code] => PRO
+        )
+
+    [Etype] => Array
+        (
+            [id] => 4
+            [code] => REQ
+            [description] => Request - Something you're asking of other group(s)
+        )
+
+)
+

@@ -30,7 +30,15 @@ class Event extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
+		),
+		
+        'Etype' => array(
+            'className' => 'Etype',
+            'foreignKey' => 'etype_id',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
 	);
 
 //TODO: create afterFind() to set up potential incoming links
@@ -117,6 +125,27 @@ public function trycontain($stime){
         
     } 
 
+
+    //TODO:UNTESTED
+    // Takes a list of event_ids, and a start time.  Determines if any of the events given
+    // match the start time given
+    
+    public function getMatchingByStime($eids, $stime)
+    {
+        $rs = $this->find('list',array(
+            'conditions'=>array(
+                'Event.id'=>$eid,
+                'Event.stime'=>$stime),
+            'fields'=>array(
+                'Event.id')));
+                
+        if(!empty($rs)){
+            $rev_events = Hash::extract($rs, '{n}');
+            return $rev_events;
+        }
+        else{ return null;}
+        
+    }
 
 
 

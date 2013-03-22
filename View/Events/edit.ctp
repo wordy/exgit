@@ -7,7 +7,8 @@
 		echo $this->Form->input('id');
 		echo $this->Form->hidden('plan_id');
 
-        echo $this->Form->input('PriLink.etype_id', array('options'=>$etypes, 'type'=>'select', 'multiple'=>false, 'value'=>$seletype));
+        //echo $this->Form->input('etype_id', array('options'=>$etypes, 'type'=>'select', 'multiple'=>false, 'value'=>$seletype));
+        echo $this->Form->input('etype_id', array('options'=>$etypes, 'type'=>'select', 'multiple'=>false));
         //echo $this->Form->input('PriLink.Etype.id');
 		echo $this->Form->input('stime');
 		echo $this->Form->input('etime');

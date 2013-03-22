@@ -13,6 +13,14 @@ class User extends AppModel {
  */
 	public $displayField = 'username';
 
+    public function beforeSave($options = array()) {
+        if (isset($this->data[$this->alias]['password'])) {
+            $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+        }
+        return true;
+}
+
+
 /**
  * Validation rules
  *
@@ -20,9 +28,9 @@ class User extends AppModel {
  */
 	public $validate = array(
 		'username' => array(
-			'notempty' => array(
+			'required' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'A username is required',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -30,9 +38,9 @@ class User extends AppModel {
 			),
 		),
 		'password' => array(
-			'notempty' => array(
+			'required' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please choose a password',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -40,10 +48,10 @@ class User extends AppModel {
 			),
 		),
 		'role' => array(
-			'inlist' => array(
-				'rule' => array('inlist'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+			'valid' => array(
+				'rule' => array('inlist', array('admin','teamlead')),
+				'message' => 'Enter a user\'s role',
+				'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations

@@ -1471,3 +1471,278 @@ Stack Trace:
 #9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
 #10 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2013-03-13 12:49:57 Error: Fatal Error (1): Call to a member function getLinksByTeam() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 449]
+2013-03-13 12:49:57 Error: [FatalErrorException] Call to a member function getLinksByTeam() on a non-object
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 449)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 449, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 449, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-13 12:50:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'conditions' in 'where clause'
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Plan`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Plan`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Plan`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Plan), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1551): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Plan.php(73): Model->field('id', Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(450): Plan->getActiveByTeam('1')
+#8 [internal function]: EventsController->makePlanByTeam('1')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-13 12:54:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'conditions' in 'where clause'
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Plan`.`...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Plan`.`...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Plan`.`...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Plan), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(1551): Model->find('first', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Model\Plan.php(73): Model->field('id', Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(450): Plan->getActiveByTeam('1')
+#8 [internal function]: EventsController->makePlanByTeam('1')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-13 13:02:28 Error: Fatal Error (4): syntax error, unexpected '(' in [C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php, line 339]
+2013-03-13 13:02:28 Error: [FatalErrorException] syntax error, unexpected '('
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 339)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 339, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 339, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-13 13:03:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(345): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:03:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DISTINCT `PriLink. event_id` FROM `execution`.`events_teams` AS `PriLink`   WHER' at line 1
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(345): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:04:38 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(345): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:05:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(345): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:06:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT PriLink....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT PriLink....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT PriLink....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(346): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:40:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT PriLink....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT PriLink....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT PriLink....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(346): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 13:40:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION PriLink.DISTINCT does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+Request URL: /cakephp/ep/events/makePlanByTeam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `PriLink...', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `PriLink...', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `PriLink...', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(EventsTeam), Array)
+#5 C:\XAMPP\htdocs\cakephp\ep\Model\EventsTeam.php(346): Model->find('list', Array)
+#6 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(449): EventsTeam->getLinksByTeam('1')
+#7 [internal function]: EventsController->makePlanByTeam('1')
+#8 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-13 21:41:56 Error: Fatal Error (4): syntax error, unexpected '{', expecting T_FUNCTION in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 108]
+2013-03-13 21:41:56 Error: [FatalErrorException] syntax error, unexpected '{', expecting T_FUNCTION
+Request URL: /cakephp/ep/plans
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 108, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 108, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-13 21:42:43 Error: [MissingViewException] View file "C:\XAMPP\htdocs\cakephp\ep\View\events\debug_events.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\XAMPP\\htdocs\\cakephp\\ep\\View\\events\\debug_events.ctp',
+)
+Request URL: /cakephp/ep/plans/getbyteam/1
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\View\View.php(467): View->_getViewFileName('/events/debug_e...')
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(947): View->render('/events/debug_e...', NULL)
+#2 C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php(106): Controller->render('/events/debug_e...')
+#3 [internal function]: PlansController->getByTeam('1')
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PlansController), Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PlansController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-13 21:46:37 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\XAMPP\htdocs\cakephp\ep\Controller\PlansController.php, line 107]
+2013-03-13 21:46:37 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cakephp/ep/plans/getbyteam/8
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 107)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 107, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 107, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-13 23:53:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.event_id' in 'field list'
+Request URL: /cakephp/ep/events/makeplanbyteam/8
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Event`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Event`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Event), 'belongsTo', 'Event', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(485): Model->find('all', Array)
+#8 [internal function]: EventsController->makePlanByTeam('8')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-13 23:54:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.pri_team_id' in 'field list'
+Request URL: /cakephp/ep/events/makeplanbyteam/8
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Event`....', Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1274): DboSource->fetchAll('SELECT `Event`....', false)
+#4 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1220): DboSource->queryAssociation(Object(EventsTeam), Object(Event), 'belongsTo', 'Event', Array, Array, true, Array, 0, Array)
+#5 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Event), Object(EventsTeam), 'hasMany', 'PriLink', Array, Array, true, Array, 1, Array)
+#6 C:\XAMPP\htdocs\cakephp\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Event), Array)
+#7 C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php(485): Model->find('all', Array)
+#8 [internal function]: EventsController->makePlanByTeam('8')
+#9 C:\XAMPP\htdocs\cakephp\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\XAMPP\htdocs\cakephp\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\XAMPP\htdocs\cakephp\ep\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-14 00:00:53 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 535]
+2013-03-14 00:00:53 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/ep/events/makeplanbyteam2/8
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 535)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 535, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 535, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-21 22:15:27 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\XAMPP\htdocs\cakephp\ep\View\Events\make_plan.ctp, line 34]
+2013-03-21 22:15:27 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/ep/events/makePlanByTeam/8
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 34, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\XAMPP\htdocs...', 34, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-21 22:33:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 452]
+2013-03-21 22:33:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/events/makePlanByTeam/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-21 22:33:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\XAMPP\htdocs\cakephp\ep\Controller\EventsController.php, line 452]
+2013-03-21 22:33:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/ep/events/makePlanByTeam/
+Stack Trace:
+#0 C:\XAMPP\htdocs\cakephp\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452, Array)
+#2 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\XAMPP\htdocs...', 452, Array)
+#3 C:\XAMPP\htdocs\cakephp\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

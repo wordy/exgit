@@ -100,4 +100,16 @@ class PlansController extends AppController {
 		$this->Session->setFlash(__('Plan was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+    
+    public function getByTeam($teamid){
+        //$this->set('events', $this->Plan->findByTeamIdAndActive($teamid,1));
+        
+        //$this->set('events', $this->Plan->find('first', array('team_id'=>$teamid,'active'=>1)));
+        //$this->set('events', $this->Plan->field('id', array('team_id'=>$teamid,'active'=>1)));
+        $this->set('events', $this->Plan->getActiveByTeam($teamid));
+        $this->render('/events/debug_req');
+    }
+    
+        
+    
 }

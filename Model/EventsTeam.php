@@ -31,7 +31,8 @@ class EventsTeam extends AppModel {
 			'foreignKey' => 'event_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'counterCache' => 'num_sec_teams'
 		),
 		'LinkedEvent' => array(
             'className' => 'Event',
@@ -300,11 +301,8 @@ class EventsTeam extends AppModel {
     
     //returns 0-index array, for use in Form Helper
     public function getSelectedTeams($eventid){
-        //$this->recursive='2';
         $event = $this->Event->findById($eventid);
-        //$this->log($event, 'debug');
         $priteam = $event['Plan']['team_id'];
-        //$this->log($priteam, 'debug');
         $rel_teams = $this->find('list', array(
             'conditions'=>array(
                 'event_id'=>$eventid,
@@ -315,19 +313,83 @@ class EventsTeam extends AppModel {
 
         // FormHelper requires $options['Selected'] to be an int list        
         if(!empty($selteams)){
-        
-        foreach ($selteams as $st) {
-            $sts[] = (int) $st;
+            foreach ($selteams as $st) { 
+                $sts[] = (int) $st; }
+            return $sts;
         }
-        return $sts;
-        }
-        
         else {return null;}
     }
     
-   public function trycontain($eventid){
+    
+    //TODO: UNTESTED
+    public function getRevEvents($eventid, $secteamid){
+        $event = $this->Event->findById($eventid);
+        $priteamid = $event['Plan']['team_id'];
+        $stime_to_match = $event['Event']['stime'];
+        $rev_links = $this->find('list', array(
+            'conditions'=>array(
+                'pri_team_id'=>$secteamid,
+                'sec_team_id'=>$priteamid),
+            'fields'=>array(
+                'event_id')));
+        
+    }
+    
+    
+    
+    public function getLinksByTeam($teamid, $active=array(0,1)){
+        $event = $this->find('list', array(
+            'conditions'=>array(
+                'pri_team_id'=>$teamid,
+                'active'=>$active),
+            'fields'=>array(
+                
+                'event_id')));
+                
+        $eids = Hash::extract($event,'{n}');
+        
+        return $eids;
+            
+        
+    }   
+    
+    public function getSecLinksByTeam($teamid, $active=array(0,1)){
+        $event = $this->find('list', array(
+            'conditions'=>array(
+                'sec_team_id'=>$teamid,
+                'active'=>$active),
+            'fields'=>array(
+                
+                'event_id')));
+                
+        $eids = Hash::extract($event,'{n}');
+        
+        return $eids;
+            
+        
+    }
+    
+    public function getAllLinksByTeam($teamid, $active=array(0,1)){
+        $event = $this->find('list', array(
+            'conditions'=>array(
+                'OR'=>array(
+                    'sec_team_id'=>$teamid,
+                    'pri_team_id'=>$teamid),
+                'active'=>$active),
+            'fields'=>array(
+                
+                'event_id')));
+                
+        $eids = Hash::extract($event,'{n}');
+        
+        return $eids;
+            
+        
+    }   
+     
+    public function trycontain($eventid){
        
-       $stime = $this->Event->getSTime($eventid);
+        $stime = $this->Event->getSTime($eventid);
        
        //$this->log($stime, 'debug');
         //$tobec = array('PriLink','Event','Event.Plan');

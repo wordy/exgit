@@ -7,7 +7,7 @@
 		echo $this->Form->input('pri_team_id');
 		echo $this->Form->input('sec_team_id');
 		echo $this->Form->input('linked_event_id',array('empty' => ''));
-		echo $this->Form->input('etype_id',array('empty' => ''));
+		echo $this->Form->input('ltype_id',array('empty' => ''));
 		echo $this->Form->input('active');
 	?>
 	</fieldset>
@@ -22,7 +22,7 @@
 		<li><?php echo $this->Html->link(__('New Event'), array('controller' => 'events', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Teams'), array('controller' => 'teams', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Pri Team'), array('controller' => 'teams', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'etypes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'etypes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'ltypes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'ltypes', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

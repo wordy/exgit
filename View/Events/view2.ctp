@@ -6,9 +6,9 @@
 			<?php echo h($event['Event']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Etype'); ?></dt>
+		<dt><?php echo __('Ltype'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($event['Etype']['type'], array('controller' => 'etypes', 'action' => 'view', $event['Etype']['id'])); ?>
+			<?php echo $this->Html->link($event['Ltype']['type'], array('controller' => 'ltypes', 'action' => 'view', $event['Ltype']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Plan'); ?></dt>
@@ -65,8 +65,8 @@
 		<li><?php echo $this->Form->postLink(__('Delete Event'), array('action' => 'delete', $event['Event']['id']), null, __('Are you sure you want to delete # %s?', $event['Event']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Events'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Event'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'etypes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'etypes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Ltypes'), array('controller' => 'ltypes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Ltype'), array('controller' => 'ltypes', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Plans'), array('controller' => 'plans', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Plan'), array('controller' => 'plans', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Events Groups'), array('controller' => 'events_groups', 'action' => 'index')); ?> </li>

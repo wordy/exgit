@@ -7,9 +7,9 @@
 		echo $this->Form->input('id');
 		echo $this->Form->hidden('plan_id');
 
-        //echo $this->Form->input('etype_id', array('options'=>$etypes, 'type'=>'select', 'multiple'=>false, 'value'=>$seletype));
-        echo $this->Form->input('etype_id', array('options'=>$etypes, 'type'=>'select', 'multiple'=>false));
-        //echo $this->Form->input('PriLink.Etype.id');
+        //echo $this->Form->input('ltype_id', array('options'=>$ltypes, 'type'=>'select', 'multiple'=>false, 'value'=>$selltype));
+        echo $this->Form->input('PriLink.ltype_id', array('options'=>$ltypes, 'value'=>$selltype, 'type'=>'select', 'multiple'=>false));
+        //echo $this->Form->input('PriLink.Ltype.id');
 		echo $this->Form->input('stime');
 		echo $this->Form->input('etime');
 		
@@ -21,8 +21,8 @@
 		
 		echo $this->Form->input('active', array('type'=>'hidden'));
 		//echo $this->Form->input('num_sec_teams');
-        //echo $this->Form->input('PriLink.etype_id'), array('options'=>$etypes, 'multiple'=>false, 'type'=>'select');
-        //echo $this->Form->input('Etypes'), array('options'=>$etypes, 'multiple'=>false, 'type'=>'select');
+        //echo $this->Form->input('PriLink.ltype_id'), array('options'=>$ltypes, 'multiple'=>false, 'type'=>'select');
+        //echo $this->Form->input('Ltypes'), array('options'=>$ltypes, 'multiple'=>false, 'type'=>'select');
         
         //echo $this->Form->input('PriLink.pri_team_id', array('type'=>'hidden'));
         //echo $this->Form->input('PriLink.pri_team_id', array('options'=>$teams, 'multiple'=>false, 'type'=>'select'));

@@ -122,7 +122,7 @@
 		<th><?php echo __('Pri Team Id'); ?></th>
 		<th><?php echo __('Sec Team Id'); ?></th>
 		<th><?php echo __('Linked Event Id'); ?></th>
-		<th><?php echo __('Etype Id'); ?></th>
+		<th><?php echo __('Ltype Id'); ?></th>
 		<th><?php echo __('Active'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -135,7 +135,7 @@
 			<td><?php echo $priEvents['pri_team_id']; ?></td>
 			<td><?php echo $priEvents['sec_team_id']; ?></td>
 			<td><?php echo $priEvents['linked_event_id']; ?></td>
-			<td><?php echo $priEvents['etype_id']; ?></td>
+			<td><?php echo $priEvents['ltype_id']; ?></td>
 			<td><?php echo $priEvents['active']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'events_teams', 'action' => 'view', $priEvents['id'])); ?>
@@ -163,7 +163,7 @@
 		<th><?php echo __('Pri Team Id'); ?></th>
 		<th><?php echo __('Sec Team Id'); ?></th>
 		<th><?php echo __('Linked Event Id'); ?></th>
-		<th><?php echo __('Etype Id'); ?></th>
+		<th><?php echo __('Ltype Id'); ?></th>
 		<th><?php echo __('Active'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -176,7 +176,7 @@
 			<td><?php echo $secEvents['pri_team_id']; ?></td>
 			<td><?php echo $secEvents['sec_team_id']; ?></td>
 			<td><?php echo $secEvents['linked_event_id']; ?></td>
-			<td><?php echo $secEvents['etype_id']; ?></td>
+			<td><?php echo $secEvents['ltype_id']; ?></td>
 			<td><?php echo $secEvents['active']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'events_teams', 'action' => 'view', $secEvents['id'])); ?>

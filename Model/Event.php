@@ -30,15 +30,7 @@ class Event extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
-		
-        'Etype' => array(
-            'className' => 'Etype',
-            'foreignKey' => 'etype_id',
-            'conditions' => '',
-            'fields' => '',
-            'order' => ''
-        )
+		)
 	);
 
 //TODO: create afterFind() to set up potential incoming links

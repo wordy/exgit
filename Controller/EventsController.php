@@ -20,7 +20,7 @@ class EventsController extends AppController {
 
     public function view_events() {
 
-        $tobc = array('PriLink.Etype', 'SecLink.Etype', 'Plan.Team', 'PriLink.PriTeam', 'PriLink.SecTeam', 'PriLink.Event', 'SecLink.PriTeam', 'SecLink.SecTeam', 'SecLink.Event');
+        $tobc = array('PriLink.Ltype', 'SecLink.Ltype', 'Plan.Team', 'PriLink.PriTeam', 'PriLink.SecTeam', 'PriLink.Event', 'SecLink.PriTeam', 'SecLink.SecTeam', 'SecLink.Event');
         $this -> paginate = array('contain' => $tobc, 'order' => 'Event.id DESC');
 
         //$options = array('contain'=>$tobc,'conditions' => array('Event.' . $this->Event->primaryKey => $id));
@@ -29,7 +29,7 @@ class EventsController extends AppController {
     }
 
     public function index() {
-        $this -> Event -> recursive = 0;
+        $this -> Event -> recursive = 2;
         $this -> paginate = array('order' => 'Event.id DESC');
         $this -> set('events', $this -> paginate());
         $this->render('index2');
@@ -46,7 +46,7 @@ class EventsController extends AppController {
         if (!$this -> Event -> exists($id)) {
             throw new NotFoundException(__('Invalid event'));
         }
-        $tobc = array('PriLink.Etype', 'SecLink.Etype', 'Plan.Team', 'PriLink.PriTeam', 'PriLink.SecTeam', 'PriLink.Event', 'SecLink.PriTeam', 'SecLink.SecTeam', 'SecLink.Event');
+        $tobc = array('PriLink.Ltype', 'SecLink.Ltype', 'Plan.Team', 'PriLink.PriTeam', 'PriLink.SecTeam', 'PriLink.Event', 'SecLink.PriTeam', 'SecLink.SecTeam', 'SecLink.Event');
         $options = array('contain' => $tobc, 'conditions' => array('Event.' . $this -> Event -> primaryKey => $id));
         $this -> set('event', $this -> Event -> find('first', $options));
     }
@@ -65,14 +65,14 @@ class EventsController extends AppController {
         }
         $tobc = array(
             'PriLink'=>array(
-                'Etype',
+                'Ltype',
                 'PriTeam',
                 'SecTeam',
                 'Event'=>array(
                     'conditions'=>array(
                         'plan_id'=>$planid))),
             'SecLink'=>array(
-                'Etype',
+                'Ltype',
                 'PriTeam',
                 'SecTeam',
                 'Event'),
@@ -116,7 +116,84 @@ class EventsController extends AppController {
         if ($this -> request -> is('post')) {
             $priteam = $this -> request -> data['Event']['PriTeam'];
             $secteams = $this -> request -> data['Event']['SecTeam'];
-            $etype = $this -> request -> data['PriLink']['etype_id'];
+            $ltype = $this -> request -> data['PriLink']['ltype_id'];
+
+            // Check if plan_id is active team's plan... if so, make the linkage active
+            if ($this -> Event -> Plan -> isActive($this -> request -> data['Event']['plan_id'])) {
+                $linkactive = 1;} 
+            else { $linkactive = 0; }
+            
+            // No secteams, means it only involves the team that's creating the event
+            if(empty($secteams)){
+                $this -> Event -> create();
+            
+                if ($this -> Event -> save($this -> request -> data)) {
+                    $event_id = $this -> Event -> id;
+                    $secdata['PriLink'] = array();
+                    $this -> Event -> PriLink -> create();
+                        $secdata['event_id'] = $event_id;
+                        $secdata['pri_team_id'] = $priteam;
+                        $secdata['active'] = $linkactive;
+                        $secdata['ltype_id'] = $ltype;
+
+                    if($this -> Event -> PriLink -> save($secdata)){
+                        $this -> Session -> setFlash(__('The event has been saved'));
+                        $this -> redirect(array('action' => 'index'));
+                    }
+                }
+                
+                else { // Didn't save 
+                    $this -> Session -> setFlash(__('The event could not be saved. Please, try again.'));
+                }
+            }
+
+            elseif(!empty($secteams)) { //There are secteams, so creates linkages for each.
+
+                $this -> Event -> create();
+                    if ($this -> Event -> save($this -> request -> data)) {
+                        $event_id = $this -> Event -> id;
+
+                        foreach ($secteams as $key => $gid) {
+                        $secdata['PriLink'] = array();
+                        $this -> Event -> PriLink -> create();
+                            $secdata['event_id'] = $event_id;
+                            $secdata['pri_team_id'] = $priteam;
+                            $secdata['sec_team_id'] = $gid;
+                            $secdata['active'] = $linkactive;
+                            $secdata['ltype_id'] = $ltype;
+                            $this -> Event -> PriLink -> save($secdata);
+                        }
+                        
+                        $this -> Session -> setFlash(__('The event has been saved'));
+                        $this -> redirect(array('action' => 'index'));
+                    }
+                    
+                    else { //Didn't save 
+                        $this -> Session -> setFlash(__('The event could not be saved. Please, try again.'));
+                    }
+            
+
+        }} 
+        
+        
+        else {          
+        //Not posting data to be saved, must want to enter a new event...
+        
+        //TODO: $tid = $this->session('tid').  if isset($tid){ find('list', array('team_id'=>$tid))} else{find('list')}
+        // or better yet, keep current editing plan in session, only allow them to add to it
+        
+        $plans = $this -> Event -> Plan -> find('list');
+        $teams = $this -> Event -> PriLink -> PriTeam -> find('list');
+        $ltypes = $this -> Event -> PriLink -> Ltype -> find('list');
+        $this -> set(compact('plans', 'teams', 'ltypes'));
+        }
+    }
+
+    public function add_OLD() {
+        if ($this -> request -> is('post')) {
+            $priteam = $this -> request -> data['Event']['PriTeam'];
+            $secteams = $this -> request -> data['Event']['SecTeam'];
+            $ltype = $this -> request -> data['PriLink']['ltype_id'];
 
             // Check if plan_id is active team's plan... if so, make the linkage active
             if ($this -> Event -> Plan -> isActive($this -> request -> data['Event']['plan_id'])) {
@@ -136,7 +213,7 @@ class EventsController extends AppController {
                     $secdata['pri_team_id'] = $priteam;
                     $secdata['sec_team_id'] = $gid;
                     $secdata['active'] = $linkactive;
-                    $secdata['etype_id'] = $etype;
+                    $secdata['ltype_id'] = $ltype;
 
                     $this -> Event -> PriLink -> save($secdata);
 
@@ -156,8 +233,8 @@ class EventsController extends AppController {
         
         $plans = $this -> Event -> Plan -> find('list');
         $teams = $this -> Event -> PriLink -> PriTeam -> find('list');
-        $etypes = $this -> Event -> PriLink -> Etype -> find('list');
-        $this -> set(compact('plans', 'teams', 'etypes'));
+        $ltypes = $this -> Event -> PriLink -> Ltype -> find('list');
+        $this -> set(compact('plans', 'teams', 'ltypes'));
     }
 
     public function add_ORIG() {
@@ -187,7 +264,7 @@ class EventsController extends AppController {
      * @return void
      */
     public function edit($id = null) {
-        //TODO: not saving changes in etype
+        //TODO: not saving changes in ltype
 
         if (!$this -> Event -> exists($id)) {
             throw new NotFoundException(__('Invalid event'));
@@ -204,8 +281,8 @@ class EventsController extends AppController {
             } else { $linkactive = 0;
             }
 
-            //$etype = $this -> request -> data['PriLink']['etype_id'];
-            $etype = $this -> request -> data['Event']['etype_id'];
+            //$ltype = $this -> request -> data['PriLink']['ltype_id'];
+            $ltype = $this -> request -> data['PriLink']['ltype_id'];
             $new_seclinks = $this -> request -> data['PriLink']['SecTeam'];
             $old_seclinks = $this -> Event -> PriLink -> getSelectedTeams($id);
 
@@ -228,7 +305,7 @@ class EventsController extends AppController {
                     $secdata['pri_team_id'] = $this -> data['Plan']['team_id'];
                     $secdata['sec_team_id'] = $gid;
                     $secdata['active'] = $linkactive;
-                    $secdata['etype_id'] = $etype;
+                    $secdata['ltype_id'] = $ltype;
 
                     $this -> Event -> PriLink -> save($secdata);
                 }
@@ -273,10 +350,10 @@ class EventsController extends AppController {
 
         $plans = $this -> Event -> Plan -> find('list');
         $priTeams = $this -> Event -> PriLink -> PriTeam -> find('list');
-        $etypes = $this -> Event -> PriLink -> Etype -> find('list');
-        $seletype = $this -> Event -> PriLink -> field('etype_id', array('event_id' => $id));
+        $ltypes = $this -> Event -> PriLink -> Ltype -> find('list');
+        $selltype = $this -> Event -> PriLink -> field('ltype_id', array('event_id' => $id));
         $selteams = $this -> Event -> PriLink -> getSelectedTeams($id);
-        $this -> set(compact('plans', 'seletype', 'priTeams', 'selteams', 'etypes'));
+        $this -> set(compact('plans', 'selltype', 'priTeams', 'selteams', 'ltypes'));
     }
 
     /**
@@ -393,9 +470,9 @@ class EventsController extends AppController {
         $this -> redirect(array('action' => 'index'));
     }
 
-    public function getEtypeByEvent($eid) {
-        $etype = $this -> Event -> PriLink -> field('etype_id', array('event_id' => $eid));
-        $this -> set('out1', $etype);
+    public function getLtypeByEvent($eid) {
+        $ltype = $this -> Event -> PriLink -> field('ltype_id', array('event_id' => $eid));
+        $this -> set('out1', $ltype);
 
         $this -> render('/events/debug_req');
 
@@ -437,7 +514,7 @@ class EventsController extends AppController {
                     'fields'=>array('Event.*'))
                 )));
             
-        //$etype = $this -> Event -> PriLink -> field('etype_id', array('event_id' => $eid));
+        //$ltype = $this -> Event -> PriLink -> field('ltype_id', array('event_id' => $eid));
 
          $this -> set('out1', $rs);
 
@@ -459,12 +536,12 @@ class EventsController extends AppController {
         // Use Containable to substantially limit results
         $tobec = array(
             'Plan.id', 'Plan.name','Plan.team_id','Plan.Team.code',
-            'Etype.id','Etype.code',
-            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Etype.code',
+            'Ltype.id','Ltype.code',
+            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Ltype.code',
             'PriLink','PriLink.Event'=>array(
                 'fields'=>array(
                     'id','plan_id','stime','etime','description','comment','private')),
-            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Etype.code'
+            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Ltype.code'
             );
         
         // Limiting Event fields (mostly just created/updated and #links)
@@ -499,11 +576,11 @@ class EventsController extends AppController {
         // Use Containable to substantially limit results
         $tobec = array(
             'Plan.id', 'Plan.name','Plan.team_id','Plan.Team.code',
-            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Etype.code',
+            'SecLink','SecLink.Event','SecLink.PriTeam.code','SecLink.SecTeam.code','SecLink.Ltype.code',
             'PriLink','PriLink.Event'=>array(
                 'fields'=>array(
                     'id','plan_id','stime','etime','description','comment','private')),
-            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Etype.code'
+            'PriLink.PriTeam.code','PriLink.SecTeam.code','PriLink.Ltype.code'
             );
         
         // Limiting Event fields (mostly just created/updated and #links)

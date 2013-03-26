@@ -14,7 +14,7 @@ class EtypesController extends AppController {
  */
 	public function index() {
 		$this->Etype->recursive = 0;
-		$this->set('etypes', $this->paginate());
+		$this->set('ltypes', $this->paginate());
 	}
 
 /**
@@ -26,10 +26,10 @@ class EtypesController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Etype->exists($id)) {
-			throw new NotFoundException(__('Invalid etype'));
+			throw new NotFoundException(__('Invalid ltype'));
 		}
 		$options = array('conditions' => array('Etype.' . $this->Etype->primaryKey => $id));
-		$this->set('etype', $this->Etype->find('first', $options));
+		$this->set('ltype', $this->Etype->find('first', $options));
 	}
 
 /**
@@ -41,10 +41,10 @@ class EtypesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Etype->create();
 			if ($this->Etype->save($this->request->data)) {
-				$this->Session->setFlash(__('The etype has been saved'));
+				$this->Session->setFlash(__('The ltype has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The etype could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The ltype could not be saved. Please, try again.'));
 			}
 		}
 	}
@@ -58,7 +58,7 @@ class EtypesController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Etype->exists($id)) {
-			throw new NotFoundException(__('Invalid etype'));
+			throw new NotFoundException(__('Invalid ltype'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Etype->save($this->request->data)) {

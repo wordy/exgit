@@ -1,5 +1,5 @@
-<div class="etypes index">
-	<h2><?php echo __('Etypes'); ?></h2>
+<div class="ltypes index">
+	<h2><?php echo __('Ltypes'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -7,15 +7,15 @@
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($etypes as $etype): ?>
+	<?php foreach ($ltypes as $ltype): ?>
 	<tr>
-		<td><?php echo h($etype['Etype']['id']); ?>&nbsp;</td>
-		<td><?php echo h($etype['Etype']['code']); ?>&nbsp;</td>
-		<td><?php echo h($etype['Etype']['description']); ?>&nbsp;</td>
+		<td><?php echo h($ltype['Ltype']['id']); ?>&nbsp;</td>
+		<td><?php echo h($ltype['Ltype']['code']); ?>&nbsp;</td>
+		<td><?php echo h($ltype['Ltype']['description']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $etype['Etype']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $etype['Etype']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $etype['Etype']['id']), null, __('Are you sure you want to delete # %s?', $etype['Etype']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $ltype['Ltype']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $ltype['Ltype']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $ltype['Ltype']['id']), null, __('Are you sure you want to delete # %s?', $ltype['Ltype']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -37,7 +37,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Etype'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New Ltype'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Events Teams'), array('controller' => 'events_teams', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Events Team'), array('controller' => 'events_teams', 'action' => 'add')); ?> </li>
 	</ul>

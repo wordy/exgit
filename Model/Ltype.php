@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Etype Model
+ * Ltype Model
  *
  * @property EventsTeam $EventsTeam
  */
-class Etype extends AppModel {
+class Ltype extends AppModel {
 
 /**
  * Display field
@@ -25,7 +25,7 @@ class Etype extends AppModel {
 	public $hasMany = array(
 		'EventsTeam' => array(
 			'className' => 'EventsTeam',
-			'foreignKey' => 'etype_id',
+			'foreignKey' => 'ltype_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -35,11 +35,6 @@ class Etype extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		),
-		
-       'Events'=>array(
-            'className'=> 'Events',
-            'foreignKey'=> 'etype_id')
-	);
+		));
 
 }

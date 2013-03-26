@@ -96,7 +96,7 @@
             <td><?php echo $pl['Event']['id']; ?></td>
             <td><?php echo $pl['linked_event_id']; ?></td>
             <td><?php echo $this->Time->format('n/j H:i:s',$pl['Event']['stime']); ?></td>
-			<td><?php echo (!empty($pl['Etype']['code']) ? $pl['Etype']['code']:''); ?></td>
+			<td><?php echo (!empty($pl['Ltype']['code']) ? $pl['Ltype']['code']:''); ?></td>
 			<td>
 			 <?php 
             
@@ -112,8 +112,8 @@
             ?>
 			    
 	</td>
-			
-			<?php if($pl['SecTeam']['code'] && $pl['linked_event_id']){
+			<?php if (!empty($pl['SecTeam'])){
+			     if($pl['SecTeam']['code'] && $pl['linked_event_id']){
 			    echo '<td>'. $this->Html->link($pl['SecTeam']['code'], array('action'=>'view',$pl['linked_event_id'])) . '</td>';
                 
 			} 
@@ -123,7 +123,7 @@
 			<td><?php echo $pl['SecTeam']['code']; ?></td>
 
 			
-			<?php }?>
+			<?php }}?>
             <td><?php echo $pl['Event']['description']; ?></td>
 
 			<td><?php echo $pl['active']; ?></td>
@@ -171,7 +171,7 @@
             <td><?php echo $sl['linked_event_id']; ?></td>
 
             <td><?php echo $this->Time->format('n/j H:i:s',$sl['Event']['stime']); ?></td>
-            <td><?php echo (!empty($sl['Etype']['code']) ? $sl['Etype']['code']:''); ?></td>
+            <td><?php echo (!empty($sl['Ltype']['code']) ? $sl['Ltype']['code']:''); ?></td>
             
             <td><?php 
             

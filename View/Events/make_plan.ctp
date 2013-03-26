@@ -26,12 +26,12 @@
 	    <td><?php echo h($this->Common->makeEtime($event['Event']['stime'],$event['Event']['etime'])) ?>&nbsp;</td>
 	    <td><?php 
         
-        if(!empty($event['PriLink'][0]['Etype']['code'])) {
-           echo h($event['PriLink'][0]['Etype']['code']);
+        if(!empty($event['PriLink'][0]['Ltype']['code'])) {
+           echo h($event['PriLink'][0]['Ltype']['code']);
         } 
         
-        elseif(!empty($event['Etype']['code'])){
-            echo h($event['Etype']['code']);
+        elseif(!empty($event['Ltype']['code'])){
+            echo h($event['Ltype']['code']);
         }
         
         ?>&nbsp;</td>

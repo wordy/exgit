@@ -12,8 +12,8 @@
     <h3><?php echo __('Actions'); ?></h3>
     <ul>
         <li><?php echo $this->Html->link(__('New Event'), array('action' => 'add')); ?></li>
-        <li><?php echo $this->Html->link(__('List Ltypes'), array('controller' => 'ltypes', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Ltype'), array('controller' => 'ltypes', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'etypes', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'etypes', 'action' => 'add')); ?> </li>
         <li><?php echo $this->Html->link(__('List Plans'), array('controller' => 'plans', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New Plan'), array('controller' => 'plans', 'action' => 'add')); ?> </li>
         <li><?php echo $this->Html->link(__('List Events Groups'), array('controller' => 'events_groups', 'action' => 'index')); ?> </li>
@@ -46,7 +46,7 @@
 	<tr>
 		<td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($event['Ltype']['type'], array('controller' => 'ltypes', 'action' => 'view', $event['Ltype']['id'])); ?>
+			<?php echo $this->Html->link($event['Etype']['type'], array('controller' => 'etypes', 'action' => 'view', $event['Etype']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($event['Plan']['name'], array('controller' => 'plans', 'action' => 'view', $event['Plan']['id'])); ?>

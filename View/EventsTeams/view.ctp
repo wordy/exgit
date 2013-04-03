@@ -28,7 +28,7 @@
 		</dd>
 		<dt><?php echo __('Etype'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($eventsTeam['Etype']['code'], array('controller' => 'ltypes', 'action' => 'view', $eventsTeam['Etype']['id'])); ?>
+			<?php echo $this->Html->link($eventsTeam['Etype']['code'], array('controller' => 'etypes', 'action' => 'view', $eventsTeam['Etype']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Active'); ?></dt>
@@ -49,7 +49,7 @@
 		<li><?php echo $this->Html->link(__('New Event'), array('controller' => 'events', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Teams'), array('controller' => 'teams', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Pri Team'), array('controller' => 'teams', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'ltypes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'ltypes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'etypes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'etypes', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

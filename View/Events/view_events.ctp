@@ -19,7 +19,7 @@
 	<?php foreach ($events as $event): ?>
 	<tr>
 	       <td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
-	    <td><?php if(!empty($event['PriLink'][0]['Ltype']['code'])) { echo h($event['PriLink'][0]['Ltype']['code']);} ?>&nbsp;</td>
+	    <td><?php if(!empty($event['PriLink'][0]['Etype']['code'])) { echo h($event['PriLink'][0]['Etype']['code']);} ?>&nbsp;</td>
 	    <td><?php echo h($event['Plan']['Team']['code']); ?>&nbsp;</td>
 		<td><?php echo $this->Common->makeSecTeamList($event['PriLink']) ?>&nbsp;</td>
 		

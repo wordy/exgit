@@ -94,7 +94,7 @@
 			<td><?php echo $prievents['prigroup_id']; ?></td>
 			<td><?php echo $prievents['secgroup_id']; ?></td>
 			<td><?php echo $prievents['linked_eventsgroup_id']; ?></td>
-			<td><?php echo $prievents['ltype_id']; ?></td>
+			<td><?php echo $prievents['etype_id']; ?></td>
 			<td><?php echo $prievents['active']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'events_groups', 'action' => 'view', $prievents['id'])); ?>
@@ -135,7 +135,7 @@
 			<td><?php echo $secevents['prigroup_id']; ?></td>
 			<td><?php echo $secevents['secgroup_id']; ?></td>
 			<td><?php echo $secevents['linked_eventsgroup_id']; ?></td>
-			<td><?php echo $secevents['ltype_id']; ?></td>
+			<td><?php echo $secevents['etype_id']; ?></td>
 			<td><?php echo $secevents['active']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'events_groups', 'action' => 'view', $secevents['id'])); ?>

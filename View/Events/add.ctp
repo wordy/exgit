@@ -30,7 +30,7 @@ echo $this->Form->input('vlog_in_seconds', array('type' => 'select',
         echo '<br/><br/>';
         echo 'Secondary Team(s) <br/>';
         echo $this->Form->select('SecTeam', $teams, array('multiple'=>true));
-        echo $this->Form->input('PriLink.ltype_id', array('multiple'=>false));
+        echo $this->Form->input('PriLink.etype_id', array('multiple'=>false));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

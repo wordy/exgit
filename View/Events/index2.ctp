@@ -7,7 +7,6 @@
 			<!--<th><?php echo $this->Paginator->sort('stime'); ?></th>
 			<th><?php echo $this->Paginator->sort('etime'); ?></th>-->
 			<th><?php echo $this->Paginator->sort('stime'); ?></th>
-			<th><?php echo $this->Paginator->sort('PriLink.ltype_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('comment'); ?></th>
 			<th><?php echo $this->Paginator->sort('private'); ?></th>
@@ -26,15 +25,8 @@
 		<td><?php echo h($this->Common->makeEtime($event['Event']['stime'],$event['Event']['etime'])) ?>&nbsp;</td>
 		<!--<td><?php echo h($event['Event']['stime']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['etime']); ?>&nbsp;</td>-->
-		<td><?php 
-		
-		if(!empty($event['PriLink'][0]['Ltype']['code'])){
-		echo h($event['PriLink'][0]['Ltype']['code']);} ?>&nbsp;
-		
-		</td>
 		<td><?php echo h($event['Event']['description']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['comment']); ?>&nbsp;</td>
-
 		<td><?php echo h($event['Event']['private']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['active']); ?>&nbsp;</td>
 		
@@ -74,5 +66,3 @@
 		<li><?php echo $this->Html->link(__('View_Events'), array('controller' => 'events', 'action' => 'view_events')); ?> </li>
 	</ul>
 </div>
-
-<?php //debug($events); ?>

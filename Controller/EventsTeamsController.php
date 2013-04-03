@@ -54,8 +54,8 @@ class EventsTeamsController extends AppController {
 		$linkedEvents = $this->EventsTeam->LinkedEvent->find('list');
 		$priTeams = $this->EventsTeam->PriTeam->find('list');
 		$secTeams = $this->EventsTeam->SecTeam->find('list');
-		$ltypes = $this->EventsTeam->Ltype->find('list');
-		$this->set(compact('events', 'linkedEvents', 'priTeams', 'secTeams', 'ltypes'));
+		$etypes = $this->EventsTeam->Etype->find('list');
+		$this->set(compact('events', 'linkedEvents', 'priTeams', 'secTeams', 'etypes'));
 	}
 
 /**
@@ -88,8 +88,8 @@ class EventsTeamsController extends AppController {
 		$linkedEvents = $this->EventsTeam->LinkedEvent->find('list');
 		$priTeams = $this->EventsTeam->PriTeam->find('list');
 		$secTeams = $this->EventsTeam->SecTeam->find('list');
-		$ltypes = $this->EventsTeam->Ltype->find('list');
-		$this->set(compact('events', 'linkedEvents', 'priTeams', 'secTeams', 'ltypes'));
+		$etypes = $this->EventsTeam->Etype->find('list');
+		$this->set(compact('events', 'linkedEvents', 'priTeams', 'secTeams', 'etypes'));
 	}
 
 /**
@@ -115,10 +115,10 @@ class EventsTeamsController extends AppController {
 	}
 
 
-    public function getLtypeByEvent($eid){
+    public function getEtypeByEvent($eid){
                     
         
-        return $this->EventsTeam->field('ltype_id', array('event_id'=>$eid)); 
+        return $this->EventsTeam->field('etype_id', array('event_id'=>$eid)); 
         
         
     

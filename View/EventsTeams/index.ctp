@@ -7,7 +7,7 @@
 			<th><?php echo $this->Paginator->sort('pri_team_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('sec_team_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('linked_event_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('ltype_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('etype_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('active'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -27,7 +27,7 @@
 			<?php echo $this->Html->link($eventsTeam['LinkedEvent']['id'], array('controller' => 'events', 'action' => 'view', $eventsTeam['LinkedEvent']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($eventsTeam['Etype']['code'], array('controller' => 'ltypes', 'action' => 'view', $eventsTeam['Etype']['id'])); ?>
+			<?php echo $this->Html->link($eventsTeam['Etype']['code'], array('controller' => 'etypes', 'action' => 'view', $eventsTeam['Etype']['id'])); ?>
 		</td>
 		<td><?php echo h($eventsTeam['EventsTeam']['active']); ?>&nbsp;</td>
 		<td class="actions">
@@ -60,7 +60,7 @@
 		<li><?php echo $this->Html->link(__('New Event'), array('controller' => 'events', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Teams'), array('controller' => 'teams', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Pri Team'), array('controller' => 'teams', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'ltypes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'ltypes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Etypes'), array('controller' => 'etypes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Etype'), array('controller' => 'etypes', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

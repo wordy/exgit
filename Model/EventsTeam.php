@@ -6,7 +6,7 @@ App::uses('AppModel', 'Model');
  * @property Event $Event
  * @property PriTeam $PriTeam
  * @property SecTeam $SecTeam
- * @property Ltype $Ltype
+ * @property Etype $Etype
  */
 class EventsTeam extends AppModel {
 
@@ -58,9 +58,9 @@ class EventsTeam extends AppModel {
 		),
         
         
-		'Ltype' => array(
-			'className' => 'Ltype',
-			'foreignKey' => 'ltype_id',
+		'Etype' => array(
+			'className' => 'Etype',
+			'foreignKey' => 'etype_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

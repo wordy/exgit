@@ -1,11 +1,11 @@
 <?php
 App::uses('AppController', 'Controller');
 /**
- * Ltypes Controller
+ * Etypes Controller
  *
- * @property Ltype $Ltype
+ * @property Etype $Etype
  */
-class LtypesController extends AppController {
+class EtypesController extends AppController {
 
 /**
  * index method
@@ -13,7 +13,7 @@ class LtypesController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Ltype->recursive = 0;
+		$this->Etype->recursive = 0;
 		$this->set('etypes', $this->paginate());
 	}
 
@@ -25,11 +25,11 @@ class LtypesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		if (!$this->Ltype->exists($id)) {
+		if (!$this->Etype->exists($id)) {
 			throw new NotFoundException(__('Invalid etype'));
 		}
-		$options = array('conditions' => array('Ltype.' . $this->Ltype->primaryKey => $id));
-		$this->set('etype', $this->Ltype->find('first', $options));
+		$options = array('conditions' => array('Etype.' . $this->Etype->primaryKey => $id));
+		$this->set('etype', $this->Etype->find('first', $options));
 	}
 
 /**
@@ -39,8 +39,8 @@ class LtypesController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Ltype->create();
-			if ($this->Ltype->save($this->request->data)) {
+			$this->Etype->create();
+			if ($this->Etype->save($this->request->data)) {
 				$this->Session->setFlash(__('The etype has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -57,19 +57,19 @@ class LtypesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->Ltype->exists($id)) {
+		if (!$this->Etype->exists($id)) {
 			throw new NotFoundException(__('Invalid etype'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Ltype->save($this->request->data)) {
+			if ($this->Etype->save($this->request->data)) {
 				$this->Session->setFlash(__('The etype has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The etype could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Ltype.' . $this->Ltype->primaryKey => $id));
-			$this->request->data = $this->Ltype->find('first', $options);
+			$options = array('conditions' => array('Etype.' . $this->Etype->primaryKey => $id));
+			$this->request->data = $this->Etype->find('first', $options);
 		}
 	}
 
@@ -82,16 +82,16 @@ class LtypesController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
-		$this->Ltype->id = $id;
-		if (!$this->Ltype->exists()) {
+		$this->Etype->id = $id;
+		if (!$this->Etype->exists()) {
 			throw new NotFoundException(__('Invalid etype'));
 		}
 		$this->request->onlyAllow('post', 'delete');
-		if ($this->Ltype->delete()) {
-			$this->Session->setFlash(__('Ltype deleted'));
+		if ($this->Etype->delete()) {
+			$this->Session->setFlash(__('Etype deleted'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Ltype was not deleted'));
+		$this->Session->setFlash(__('Etype was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 }
